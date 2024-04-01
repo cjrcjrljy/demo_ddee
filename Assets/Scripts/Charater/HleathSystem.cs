@@ -6,12 +6,18 @@ public class HleathSystem : MonoBehaviour
 {
     public float maxHleath;
     public float currentHleath;
+    public bool CanbeAttacked;
     public void OnEnable()
     {
+        CanbeAttacked = true;
         currentHleath = maxHleath;
     }
     public void Damage(float damage)
     {
+        if(!CanbeAttacked)
+        {
+            return;
+        }
         currentHleath-=damage;
         if (currentHleath <= 0)
         {

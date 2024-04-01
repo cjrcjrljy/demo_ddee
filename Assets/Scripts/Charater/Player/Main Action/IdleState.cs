@@ -20,7 +20,11 @@ public class IdleState : PlayerState
 
     public override void Update()
     {
-        base.Update();
+        base.Update(); 
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            StateMachine.ChangeState(player.AttackState);
+        }
         player.Facingontroller();
         if (Xinput != 0)
             StateMachine.ChangeState(player.moveState);

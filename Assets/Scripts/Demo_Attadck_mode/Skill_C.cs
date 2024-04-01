@@ -31,7 +31,7 @@ public class Skill_C : SkillState
             player.init(player.text_C, player.uI_3);
             player.BIg_after(player.ready);
         }
-        if (Input.GetKey(KeyCode.H) && ChangeTime < 0)
+        if (Input.GetKeyDown(KeyCode.H))
         {
             stateMachine.ChangeState(player._B);
             Change_ani(player.uI_3);

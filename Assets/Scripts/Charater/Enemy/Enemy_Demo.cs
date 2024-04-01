@@ -7,10 +7,11 @@ public class Enemy_Demo : MonoBehaviour
 {
     public float daojishi;
     public bool trigger;
-
+    public HleathSystem hleathSystem;
     public Animator animator;
     private void Awake()
     {
+        hleathSystem=GetComponent<HleathSystem>();
         animator = GetComponentInChildren<Animator>();
         daojishi = -2;
         trigger = false;

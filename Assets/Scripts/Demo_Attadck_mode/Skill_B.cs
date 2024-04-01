@@ -7,10 +7,11 @@ public class Skill_B : SkillState
     public Skill_B(string _animatorname, SkillStateMachine stateMachine, Player player) : base(_animatorname, stateMachine, player)
     {
     }
-  
+    public int dashspeed = 5;
     public override void Enter()
     {
         text = player.text_B;
+        dashspeed = 5;
         base.Enter();
         text.text = "BBB";
         player.uI_2.animator.enabled = true;
@@ -22,10 +23,12 @@ public class Skill_B : SkillState
     {
         if (player.change_BIG && Input.GetKeyDown(KeyCode.K)&&ChangeTime<0)
             stateMachine.ChangeState(player._C);
-        if (Input.GetKey(KeyCode.H) && ChangeTime < 0)
+        if (Input.GetKeyDown(KeyCode.H))
         {
+            player.stateMachine.ChangeState(player.dashState);
             stateMachine.ChangeState(player._A);
             Change_ani(player.uI_2);
+
         }
         base.UPdate();
     }

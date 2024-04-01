@@ -32,10 +32,6 @@ public class PlayerState
     public virtual void Update()
     {
         Xinput = Input.GetAxis("Horizontal");
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            StateMachine.ChangeState(player.AttackState);
-        }
     }
     public virtual void Exit()
     {

@@ -34,7 +34,7 @@ public class Skill_A : SkillState
         text.text = outp[player.AttackState.ComboCounter];
         if (player.change_BIG && Input.GetKeyDown(KeyCode.K)&&ChangeTime<0)
             stateMachine.ChangeState(player._B);
-        if (Input.GetKey(KeyCode.H)&&ChangeTime<0)
+        if (Input.GetKeyDown(KeyCode.H)&&ChangeTime<0)
         {
             stateMachine.ChangeState(player.ready);
             Change_ani(player.uI_1);

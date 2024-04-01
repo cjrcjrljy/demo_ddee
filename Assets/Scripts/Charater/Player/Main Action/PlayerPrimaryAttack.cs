@@ -13,8 +13,7 @@ public class PlayerPrimaryAttack : PlayerState
 
     public override void Enter()
     {
-
-        Debug.Log(player._A.currrec);
+        player.rb.velocity = new Vector2(0, 0);
         if (Time.time > LastTimeAttacked + comboWindow)
             ComboCounter = 0;
         player.change_Skill = true;
@@ -37,8 +36,6 @@ public class PlayerPrimaryAttack : PlayerState
 
     public override void Update()
     {
-      
-        player.rb.velocity = new Vector2(0, player.rb.velocity.y / 10);
         if (TriggerCalled)
             StateMachine.ChangeState(player.IdleState);
         base.Update();

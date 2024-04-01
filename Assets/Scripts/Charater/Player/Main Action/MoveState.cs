@@ -13,14 +13,18 @@ public class MoveState : PlayerState
     public override void Enter()
     {
         base.Enter();
+      
         speedmove = player.Movespeed;
-       
     }
     public override void Update()
     {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            StateMachine.ChangeState(player.AttackState);
+        }
         base.Update();
         player.Facingontroller();
-        player.rb.velocity = new Vector2(Xinput * speedmove, player.rb.velocity.y);
+        player.Setvelocity(Xinput * speedmove, player.rb.velocity.y);
         if (Mathf.Abs(Xinput)<=0.01f)
             StateMachine.ChangeState(player.IdleState);
     }

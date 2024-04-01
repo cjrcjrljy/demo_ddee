@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     public IdleState IdleState { get; private set; }
     public MoveState moveState { get; private set; }
     public PlayerPrimaryAttack AttackState { get; private set; }
+    public DashState dashState { get; private set; }
     #endregion
     #region "Move"
     public float Movespeed;
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
         stateMachine=new PlayerStateMachine();
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        dashState = new DashState(this, stateMachine, "Dash");
         IdleState=new IdleState(this,stateMachine,"Idle");
         moveState = new MoveState(this, stateMachine, "Move");
         AttackState=new PlayerPrimaryAttack(this,stateMachine,"Attack");
@@ -89,7 +91,10 @@ public class Player : MonoBehaviour
         rb.transform.Rotate(0, 180, 0);
     }
 
-
+    public void Setvelocity(float x,float y)
+    {
+        rb.velocity=new Vector2(x,y);
+    }
 
 
 
