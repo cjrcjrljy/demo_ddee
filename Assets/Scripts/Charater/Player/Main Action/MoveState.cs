@@ -5,9 +5,9 @@ using UnityEngine;
 public class MoveState : PlayerState
 {
     public float speedmove;
-    public MoveState(Player _player, PlayerStateMachine _statemachine, string _animator) : base(_player, _statemachine, _animator)
-    {
 
+    public MoveState(Player _player, PlayerStateMachine _statemachine, string _animator, PlayerInput input) : base(_player, _statemachine, _animator, input)
+    {
     }
 
     public override void Enter()
@@ -18,14 +18,14 @@ public class MoveState : PlayerState
     }
     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.Attack)
         {
             StateMachine.ChangeState(player.AttackState);
         }
         base.Update();
         player.Facingontroller();
-        player.Setvelocity(Xinput * speedmove, player.rb.velocity.y);
-        if (Mathf.Abs(Xinput)<=0.01f)
+        player.Setvelocity(player.input.AxisX * speedmove, player.rb.velocity.y);
+        if (Mathf.Abs(player.input.AxisX) <= 0.01f)
             StateMachine.ChangeState(player.IdleState);
     }
     public override void Exit()

@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+
     public Animator animator;
     public Rigidbody2D rb;
     public HleathSystem Hleath;
     public float shakeTime;
     public int pauseTime;
     public float strengh; 
+
+    public PlayerInput input;
 
     #region "skill_demo"
     public UI_Caowei uI_1;
@@ -42,16 +45,17 @@ public class Player : MonoBehaviour
     #region "Normal"
     public void Awake()
     {
+        input=GetComponent<PlayerInput>();
         Hleath=GetComponent<HleathSystem>();
         skillStateMachine=new SkillStateMachine();
         FacingRight = true;
         stateMachine=new PlayerStateMachine();
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        dashState = new DashState(this, stateMachine, "Dash");
-        IdleState=new IdleState(this,stateMachine,"Idle");
-        moveState = new MoveState(this, stateMachine, "Move");
-        AttackState=new PlayerPrimaryAttack(this,stateMachine,"Attack");
+        dashState = new DashState(this, stateMachine, "Dash",input);
+        IdleState=new IdleState(this,stateMachine,"Idle", input);
+        moveState = new MoveState(this, stateMachine, "Move", input);
+        AttackState=new PlayerPrimaryAttack(this,stateMachine,"Attack", input);
 
 
 
@@ -62,6 +66,7 @@ public class Player : MonoBehaviour
     }
     public void Start()
     {
+        input.EnableGameplayInputs();
         stateMachine.Initialize(IdleState);
         skillStateMachine.Initialize(ready);
     }

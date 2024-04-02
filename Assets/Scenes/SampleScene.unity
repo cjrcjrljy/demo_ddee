@@ -2063,6 +2063,7 @@ GameObject:
   - component: {fileID: 1627728101}
   - component: {fileID: 1627728100}
   - component: {fileID: 1627728104}
+  - component: {fileID: 1627728105}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -2150,6 +2151,7 @@ MonoBehaviour:
   shakeTime: 1
   pauseTime: 1
   strengh: 0.02
+  input: {fileID: 0}
   uI_1: {fileID: 555098365}
   uI_2: {fileID: 523834686}
   uI_3: {fileID: 855629664}
@@ -2192,6 +2194,18 @@ MonoBehaviour:
   maxHleath: 100
   currentHleath: 0
   CanbeAttacked: 0
+--- !u!114 &1627728105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627728099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33240c3404fe75e4c8723a14daeaf656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1707167909
 GameObject:
   m_ObjectHideFlags: 0

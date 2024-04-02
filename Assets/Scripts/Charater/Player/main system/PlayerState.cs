@@ -14,14 +14,16 @@ public class PlayerState
     #region "import Aciton"
     public float Xinput;
     #endregion
+    public PlayerInput Input;
     public PlayerState(Player _player,
         PlayerStateMachine _statemachine,
-        string _animator)
+        string _animator,
+        PlayerInput input)
     {
         this.player = _player;
         this.StateMachine = _statemachine;
         this.AnimatorName = _animator;
-
+        Input = input;
     }
     public virtual void Enter()
     {
@@ -31,7 +33,7 @@ public class PlayerState
     }
     public virtual void Update()
     {
-        Xinput = Input.GetAxis("Horizontal");
+       // Xinput = Input.GetAxis("Horizontal");
     }
     public virtual void Exit()
     {

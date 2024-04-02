@@ -7,7 +7,8 @@ public class PlayerPrimaryAttack : PlayerState
     public int ComboCounter=0;
     public float comboWindow=2;
     public float LastTimeAttacked;
-    public PlayerPrimaryAttack(Player _player, PlayerStateMachine _statemachine, string _animator) : base(_player, _statemachine, _animator)
+
+    public PlayerPrimaryAttack(Player _player, PlayerStateMachine _statemachine, string _animator, PlayerInput input) : base(_player, _statemachine, _animator, input)
     {
     }
 

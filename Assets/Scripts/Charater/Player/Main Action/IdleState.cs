@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IdleState : PlayerState
 {
-    public IdleState(Player _player, PlayerStateMachine _statemachine, string _animator) : base(_player, _statemachine, _animator)
+    public IdleState(Player _player, PlayerStateMachine _statemachine, string _animator, PlayerInput input) : base(_player, _statemachine, _animator, input)
     {
     }
 
@@ -21,12 +21,12 @@ public class IdleState : PlayerState
     public override void Update()
     {
         base.Update(); 
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.Attack)
         {
             StateMachine.ChangeState(player.AttackState);
         }
         player.Facingontroller();
-        if (Xinput != 0)
+        if (Input.Move)
             StateMachine.ChangeState(player.moveState);
     }
 }
