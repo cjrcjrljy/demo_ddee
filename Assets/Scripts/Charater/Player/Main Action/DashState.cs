@@ -9,6 +9,7 @@ public class DashState : PlayerState
     public int Dashspeed = 3;
     public int facdir = 1;
     public float current_Y;
+    public float current_gra;
     public DashState(Player _player, PlayerStateMachine _statemachine, string _animator, PlayerInput input) : base(_player, _statemachine, _animator, input)
     {
     }
@@ -21,12 +22,15 @@ public class DashState : PlayerState
         if (player.input.AxisX!=0)
              dir=player.input.AxisX/Mathf.Abs(player.input.AxisX);
         player.Setvelocity(Dashspeed *3f*dir, Dashspeed*3f*player.input.AxisY);
+        current_gra = player.rb.gravityScale;
+        player.rb.gravityScale=0;
         current_Y=player.rb.velocity.y;
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.rb.gravityScale = current_gra;
         player.Hleath.CanbeAttacked = true;
         Debug.Log("OUT");
     }

@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
     #region "Move"
     public float Movespeed;
     public bool FacingRight;
+    public int Facingdir = 1;
     #endregion
 
     #region "Normal"
@@ -93,7 +94,8 @@ public class Player : MonoBehaviour
     public void Filp()
     {
         FacingRight=!FacingRight;
-        rb.transform.Rotate(0, 180, 0);
+        Facingdir *= -1;
+        rb.transform.localScale = new Vector3(Facingdir, rb.transform.localScale.y, rb.transform.localScale.z);
     }
 
     public void Setvelocity(float x,float y)
