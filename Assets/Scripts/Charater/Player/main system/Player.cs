@@ -3,12 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player :Enity
 {
 
-    public Animator animator;
-    public Rigidbody2D rb;
-    public HleathSystem Hleath;
     public float shakeTime;
     public int pauseTime;
     public float strengh; 
@@ -36,27 +33,27 @@ public class Player : MonoBehaviour
     public MoveState moveState { get; private set; }
     public PlayerPrimaryAttack AttackState { get; private set; }
     public DashState dashState { get; private set; }
+    public JumpState jumpState { get; private set; }
     #endregion
     #region "Move"
+    public float jumpheigh;
     public float Movespeed;
-    public bool FacingRight;
-    public int Facingdir = 1;
     #endregion
 
     #region "Normal"
-    public void Awake()
+    public override void  Awake()
     {
+        base.Awake();
         input=GetComponent<PlayerInput>();
-        Hleath=GetComponent<HleathSystem>();
+      
         skillStateMachine=new SkillStateMachine();
         FacingRight = true;
         stateMachine=new PlayerStateMachine();
-        animator = GetComponentInChildren<Animator>();
-        rb = GetComponent<Rigidbody2D>();
         dashState = new DashState(this, stateMachine, "Dash",input);
         IdleState=new IdleState(this,stateMachine,"Idle", input);
         moveState = new MoveState(this, stateMachine, "Move", input);
         AttackState=new PlayerPrimaryAttack(this,stateMachine,"Attack", input);
+        jumpState = new JumpState(this, stateMachine, "Jump", input);
 
 
 
@@ -76,33 +73,10 @@ public class Player : MonoBehaviour
 
         stateMachine.CurrentState.Update();
         skillStateMachine.State.UPdate();
+        if(input.Jump)
+            stateMachine.ChangeState(jumpState);
     }
     #endregion
-    public void Facingontroller()
-    {
-        if (FacingRight && rb.velocity.x < -0.1)
-        {
-            Filp();
-            return;
-        }
-        if((!FacingRight)&& rb.velocity.x > 0.1)
-        {
-            Filp();
-            return;
-        }
-    }
-    public void Filp()
-    {
-        FacingRight=!FacingRight;
-        Facingdir *= -1;
-        rb.transform.localScale = new Vector3(Facingdir, rb.transform.localScale.y, rb.transform.localScale.z);
-    }
-
-    public void Setvelocity(float x,float y)
-    {
-        rb.velocity=new Vector2(x,y);
-    }
-
 
 
     /// <summary>

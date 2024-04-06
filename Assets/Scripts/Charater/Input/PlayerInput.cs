@@ -13,6 +13,7 @@ public class PlayerInput : MonoBehaviour
     public bool Switch => system.Gameplay.Switch_Nui.WasPerformedThisFrame();
     public bool Realse => system.Gameplay.Realse_skill.WasPerformedThisFrame();
     public bool Attack => system.Gameplay.Attack.WasPerformedThisFrame();
+    public bool Jump=>system.Gameplay.Jump.WasPerformedThisFrame();
     private void Awake()
     {
         system=new PlayerInputSystem();

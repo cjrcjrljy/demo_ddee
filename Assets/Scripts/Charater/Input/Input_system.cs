@@ -62,6 +62,15 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""4e06306f-e968-4f38-99d8-dfcce7112a74"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -207,6 +216,17 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Axes"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""172ae3eb-0d99-47ba-9c49-0c3517027e8c"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -219,6 +239,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
         m_Gameplay_Switch_Nui = m_Gameplay.FindAction("Switch_Nui", throwIfNotFound: true);
         m_Gameplay_Realse_skill = m_Gameplay.FindAction("Realse_skill", throwIfNotFound: true);
+        m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -284,6 +305,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Attack;
     private readonly InputAction m_Gameplay_Switch_Nui;
     private readonly InputAction m_Gameplay_Realse_skill;
+    private readonly InputAction m_Gameplay_Jump;
     public struct GameplayActions
     {
         private @PlayerInputSystem m_Wrapper;
@@ -292,6 +314,7 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
         public InputAction @Switch_Nui => m_Wrapper.m_Gameplay_Switch_Nui;
         public InputAction @Realse_skill => m_Wrapper.m_Gameplay_Realse_skill;
+        public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -313,6 +336,9 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
             @Realse_skill.started += instance.OnRealse_skill;
             @Realse_skill.performed += instance.OnRealse_skill;
             @Realse_skill.canceled += instance.OnRealse_skill;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -329,6 +355,9 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
             @Realse_skill.started -= instance.OnRealse_skill;
             @Realse_skill.performed -= instance.OnRealse_skill;
             @Realse_skill.canceled -= instance.OnRealse_skill;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -352,5 +381,6 @@ public partial class @PlayerInputSystem: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnSwitch_Nui(InputAction.CallbackContext context);
         void OnRealse_skill(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }
