@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpState : PlayerState
+public class JumpState :AircanmoveState
 {
     public JumpState(Player _player, PlayerStateMachine _statemachine, string _animator, PlayerInput input) : base(_player, _statemachine, _animator, input)
     {
@@ -15,7 +15,7 @@ public class JumpState : PlayerState
     public override void Update()
     {
         base.Update();
-        if (player.input.Attack)
-            StateMachine.ChangeState(player.IdleState);
+        if (player.rb.velocity.y < -0.2f)
+            StateMachine.ChangeState(player.jump_Fall);
     }
 }

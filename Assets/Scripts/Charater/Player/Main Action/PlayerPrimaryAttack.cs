@@ -14,7 +14,7 @@ public class PlayerPrimaryAttack : PlayerState
 
     public override void Enter()
     {
-        player.rb.velocity = new Vector2(0, 0);
+        player.Setvelocity(player.rb.velocity.x, player.rb.velocity.y/1.2f);
         if (Time.time > LastTimeAttacked + comboWindow)
             ComboCounter = 0;
         player.change_Skill = true;
@@ -27,6 +27,7 @@ public class PlayerPrimaryAttack : PlayerState
     public override void Exit()
     {
         base.Exit();
+        player.rb.gravityScale = 1;
         player.change_Skill = false;
         LastTimeAttacked=Time.time; 
         ComboCounter++;

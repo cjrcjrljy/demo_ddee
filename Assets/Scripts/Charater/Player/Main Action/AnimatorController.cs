@@ -23,5 +23,8 @@ public class AnimatorController : MonoBehaviour
         AttackSense.Instance.HitPause(player.pauseTime);
         AttackSense.Instance.Hitshake(player.shakeTime, player.strengh);
     }
-  
+    public void ChangeState_idle()
+    {
+        player.stateMachine.ChangeState(player.IdleState);
+    }
 }

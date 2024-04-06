@@ -34,6 +34,8 @@ public class Player :Enity
     public PlayerPrimaryAttack AttackState { get; private set; }
     public DashState dashState { get; private set; }
     public JumpState jumpState { get; private set; }
+    public Jump_fall jump_Fall { get; private set; }
+    public Jump_land jump_Land { get; private set; }
     #endregion
     #region "Move"
     public float jumpheigh;
@@ -54,6 +56,8 @@ public class Player :Enity
         moveState = new MoveState(this, stateMachine, "Move", input);
         AttackState=new PlayerPrimaryAttack(this,stateMachine,"Attack", input);
         jumpState = new JumpState(this, stateMachine, "Jump", input);
+        jump_Fall = new Jump_fall(this, stateMachine, "Jump_fall", input);
+        jump_Land = new Jump_land(this, stateMachine, "Jump_land", input);
 
 
 
@@ -73,8 +77,6 @@ public class Player :Enity
 
         stateMachine.CurrentState.Update();
         skillStateMachine.State.UPdate();
-        if(input.Jump)
-            stateMachine.ChangeState(jumpState);
     }
     #endregion
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerState
 {
@@ -9,7 +10,7 @@ public class PlayerState
     public string AnimatorName;
     public Rigidbody2D rb;
     public Player player;
-    public bool TriggerCalled=false;
+    public bool TriggerCalled = false;
     #endregion
     #region "import Aciton"
     public float Xinput;
@@ -33,7 +34,11 @@ public class PlayerState
     }
     public virtual void Update()
     {
-       // Xinput = Input.GetAxis("Horizontal");
+        //Xinput = Input.GetAxis("Horizontal");
+        if (player.IsGrounded)
+            if (player.input.Jump)
+                StateMachine.ChangeState(player.jumpState);
+       
     }
     public virtual void Exit()
     {

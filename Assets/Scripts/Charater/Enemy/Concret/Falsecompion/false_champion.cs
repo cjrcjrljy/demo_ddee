@@ -11,6 +11,6 @@ public class false_champion : Enemy
         base.Awake();
         movestate = new False_move(StateMachine, this, "Move");
         idlestate = new False_idle(StateMachine, this, "Idle");
-        StateMachine.Initialize(movestate);
+        StateMachine.Initialize(idlestate);
     }
 }

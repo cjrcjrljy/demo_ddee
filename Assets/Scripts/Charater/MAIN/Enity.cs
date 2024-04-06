@@ -6,7 +6,9 @@ using UnityEngine.Windows;
 public class Enity : MonoBehaviour
 {
     #region "check"
-    public bool Isground;
+    public GroundDectector Dectector;
+    public bool IsGrounded => Dectector.Isgound;
+    public bool IsFailing => rb.velocity.y < 0f && !IsGrounded;
     public bool IsHitted;
 
     #endregion
@@ -20,11 +22,11 @@ public class Enity : MonoBehaviour
     public int Facingdir = 1;
     public virtual void Awake()
     {
-       
-         
-            Hleath = GetComponent<HleathSystem>();
-            animator = GetComponentInChildren<Animator>();
-            rb = GetComponent<Rigidbody2D>();
+
+        Dectector = GetComponentInChildren<GroundDectector>();
+        Hleath = GetComponent<HleathSystem>();
+        animator = GetComponentInChildren<Animator>();
+        rb = GetComponent<Rigidbody2D>();
 
     }
     public void Facingontroller()

@@ -20,13 +20,15 @@ public class IdleState : PlayerState
 
     public override void Update()
     {
-        base.Update(); 
+        base.Update();
+        if (!player.IsGrounded && player.rb.velocity.y < 0)
+            StateMachine.ChangeState(player.jump_Fall);
         if (Input.Attack)
         {
             StateMachine.ChangeState(player.AttackState);
         }
         player.Facingontroller();
-        if (Input.Move)
+        if (Input.Move&&player.IsGrounded)
             StateMachine.ChangeState(player.moveState);
     }
 }

@@ -18,10 +18,12 @@ public class DashState : PlayerState
     {
         player.Hleath.CanbeAttacked = false;
         base.Enter();
-        float dir=1;
-        if (player.input.AxisX!=0)
-             dir=player.input.AxisX/Mathf.Abs(player.input.AxisX);
-        player.Setvelocity(Dashspeed *3f*dir, Dashspeed*3f*player.input.AxisY);
+        float dir=player.Facingdir;
+        float dir_y = player.input.AxisY;
+        if(player.input.AxisY != 0) {
+            dir=player.input.AxisX;
+        }
+        player.Setvelocity(dir*3, dir_y*5);
         current_gra = player.rb.gravityScale;
         player.rb.gravityScale=0;
         current_Y=player.rb.velocity.y;
@@ -39,7 +41,7 @@ public class DashState : PlayerState
     {
       //  player.Setvelocity(player.rb.velocity.x, current_Y);
 
-        if (player.input.Attack)
+        if (player.input.Attack)//仅供方便没有动画是的demo，后会删除
         {
             TriggerCalled = true;
         }
