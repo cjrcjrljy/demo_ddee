@@ -18,8 +18,7 @@ public class PlayerPrimaryAttack : PlayerState
         if (Time.time > LastTimeAttacked + comboWindow)
             ComboCounter = 0;
         player.change_Skill = true;
-        if (player.Hleath.currentHleath < player.Hleath.maxHleath)
-            recc(10);
+       
         player.animator.SetInteger("ComboCounter", ComboCounter);
         base.Enter();
     }

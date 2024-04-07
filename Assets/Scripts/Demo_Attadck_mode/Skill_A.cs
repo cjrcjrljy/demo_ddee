@@ -6,16 +6,19 @@ using UnityEngine.UI;
 public class Skill_A : SkillState
 {
     string[] outp = { "AAA", "AAA_!", "A" };
-
+   
     public Skill_A(string _animatorname, SkillStateMachine stateMachine, Player player) : base(_animatorname, stateMachine, player)
     {
+       
     }
     public IEnumerator Hit_andre(float rec)
     {
-        player.Hleath.Recevery(rec);
+        player.Hleath.Recevery(rec,1);
         currrec += rec;
         yield return new WaitForSeconds(1);
     }
+
+   
     public override void Enter()
     {
       
@@ -31,11 +34,13 @@ public class Skill_A : SkillState
     }
     public override void UPdate()
     {
+      
         text.text = outp[player.AttackState.ComboCounter];
-        if (player.change_BIG && Input.GetKeyDown(KeyCode.K)&&ChangeTime<0)
+        if (player.change_BIG && player.input.Switch&&ChangeTime<0)
             stateMachine.ChangeState(player._B);
-        if (Input.GetKeyDown(KeyCode.H)&&ChangeTime<0)
+        if (player.input.Realse&&ChangeTime<0)
         {
+            player.Hleath.Recevery(20);
             stateMachine.ChangeState(player.ready);
             Change_ani(player.uI_1);
         }

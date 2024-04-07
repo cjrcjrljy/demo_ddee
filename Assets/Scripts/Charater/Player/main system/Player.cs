@@ -99,11 +99,12 @@ public class Player :Enity
 
 
     /// <summary>
-    /// 大技能释放后，等待一段时间切换到ready状态
+    /// 大技能释放后，等待一段时间切换到ready状态,应该说只能传入ready状态
     /// </summary>
     /// <param name="skillState"></param>
     public void BIg_after(SkillState skillState)
     {
+
        StartCoroutine(BIGBANG(skillState));
     }
     IEnumerator BIGBANG(SkillState skillState)

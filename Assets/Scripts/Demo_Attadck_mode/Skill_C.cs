@@ -21,8 +21,9 @@ public class Skill_C : SkillState
     public override void UPdate()
     {
         base.UPdate();
-        if (player.change_BIG && Input.GetKeyDown(KeyCode.K)&&ChangeTime<0)
+        if (player.change_BIG && player.input.Switch&&ChangeTime<0)
         {
+            player._A.currrec = 0;
             player.text_A.text = "FFF";
             player.text_B.text = "GGG";
             player.text_C.text = "UUU";
@@ -31,7 +32,7 @@ public class Skill_C : SkillState
             player.init(player.text_C, player.uI_3);
             player.BIg_after(player.ready);
         }
-        if (Input.GetKeyDown(KeyCode.H))
+        if (player.input.Realse)
         {
             stateMachine.ChangeState(player._B);
             Change_ani(player.uI_3);

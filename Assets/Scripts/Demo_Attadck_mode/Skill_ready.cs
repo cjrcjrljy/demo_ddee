@@ -10,7 +10,7 @@ public class Skill_ready : SkillState
     public override void Enter()
     {
        
-        player._A.currrec = 0;
+       
         base.Enter();
     }
     public override void UPdate()

@@ -417,6 +417,7 @@ MonoBehaviour:
   maxHleath: 0
   currentHleath: 0
   CanbeAttacked: 0
+  CD_for_rec: 0
 --- !u!114 &37365638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +473,7 @@ MonoBehaviour:
   maxHleath: 100
   currentHleath: 0
   CanbeAttacked: 0
+  CD_for_rec: 0
 --- !u!70 &38715003
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1447,6 +1449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  player: {fileID: 1627728102}
 --- !u!61 &582637695
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1673,6 +1676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  player: {fileID: 1627728102}
 --- !u!61 &670261915
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2655,6 +2659,7 @@ MonoBehaviour:
   maxHleath: 100
   currentHleath: 0
   CanbeAttacked: 0
+  CD_for_rec: 0
 --- !u!114 &1627728105
 MonoBehaviour:
   m_ObjectHideFlags: 0
