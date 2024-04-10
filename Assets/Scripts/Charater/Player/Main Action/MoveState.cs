@@ -25,6 +25,8 @@ public class MoveState : PlayerState
         base.Update();
         player.Facingontroller();
         player.Setvelocity(player.input.AxisX * speedmove, player.rb.velocity.y);
+        if (!player.IsGrounded && player.rb.velocity.y < 0)
+            StateMachine.ChangeState(player.jump_Fall);
         if (Mathf.Abs(player.input.AxisX) <= 0.01f)
             StateMachine.ChangeState(player.IdleState);
     }

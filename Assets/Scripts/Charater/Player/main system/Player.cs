@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,10 @@ public class Player :Enity
 
     public float shakeTime;
     public int pauseTime;
-    public float strengh; 
-
+    public float strengh;
+    public Vector3 position;
     public PlayerInput input;
-
+    public List<SaveFor> sa;
     #region "skill_demo"
     public UI_Caowei uI_1;
     public UI_Caowei uI_2;
@@ -41,13 +42,12 @@ public class Player :Enity
     public float jumpheigh;
     public float Movespeed;
     #endregion
-
     #region "Normal"
     public override void  Awake()
     {
+        sa = new List<SaveFor>();
         base.Awake();
         input=GetComponent<PlayerInput>();
-      
         skillStateMachine=new SkillStateMachine();
         FacingRight = true;
         stateMachine=new PlayerStateMachine();
@@ -74,13 +74,13 @@ public class Player :Enity
     }
     public void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Q))
+            NNTR();
         stateMachine.CurrentState.Update();
         skillStateMachine.State.UPdate();
     }
     #endregion
-
-
+    #region"skill"
     /// <summary>
     /// 只重置文本显示
     /// </summary>
@@ -111,5 +111,20 @@ public class Player :Enity
     {
         yield return new WaitForSeconds(1);
         skillStateMachine.ChangeState(skillState);
+    }
+    #endregion
+    public void NNTR()
+    {
+        if(sa.Count==0)
+        {
+            SaveFor saveFor=new SaveFor();
+            saveFor.position=gameObject.transform.position;
+            sa.Add(saveFor);
+            Debug.Log("为空，新设置传送锚点");
+            return;
+        }
+        Debug.Log("消耗当前存储的锚点");
+        sa[0].ChangePosition();
+        sa.Clear();
     }
 }
