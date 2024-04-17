@@ -36,7 +36,7 @@ public class TostandManager : MonoBehaviour
                 GameObject  id= GameObject.Instantiate(tostand);
                 Tostands.Add(id);
             }
-               Tostands[i].transform.position = new Vector3(ori_x + (i-ff) * hinder,or_y);
+               Tostands[i].transform.position = new Vector3(ori_x + (i-ff+Random.Range(0f,1.5f)) * hinder,or_y);
             Tostands[i].gameObject.SetActive(true);
         }
     }
