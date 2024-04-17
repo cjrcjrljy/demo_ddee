@@ -4,26 +4,59 @@ using UnityEngine;
 
 public class TostandManager : MonoBehaviour
 {
-    public GameObject Reference_right;
-    public GameObject Reference_left;
-    public GameObject Tostand;
-    float y_posi;
-    public float x_right;
-    public float x_left;
-    public Vector3 po; 
+    public List<GameObject> Tostands;
+    public GameObject tostand;
+    public int hinder;
+    public GameObject one;
+    public GameObject two;
+    public GameObject three;
+    public float Y_fir;
+    public float Y_sec;
+    public float Y_thi;
+    public float x_min;
     private void Awake()
     {
-        x_right=Reference_right.transform.position.x;
-        x_left=Reference_left.transform.position.x;
-        y_posi = -6.1f;
-        po=new Vector3(x_right,y_posi);
+        Y_fir=one.transform.position.y;
+        Y_sec=two.transform.position.y;
+        Y_thi=three.transform.position.y;
+        x_min=one.transform.position.x;
     }
-    public void RandomInit(int n)
+    private void Start()
     {
-        for(int i=1;i<=n;i++)
+        Init_(x_min, Y_fir, 2, 0);
+        Init_(x_min,Y_sec, 2, 2);
+        Init_(x_min,Y_thi, 2, 4);
+    }
+    public void Init_(float ori_x,float or_y,int much,int ff)
+    {
+        for(int i=ff;i<much+ff;i++)
         {
-            float x=Random.Range(x_left,x_right);
-            poolmanager.Release(Tostand, new Vector3(x,y_posi));
+            if (i >= Tostands.Count)
+            {
+                GameObject  id= GameObject.Instantiate(tostand);
+                Tostands.Add(id);
+            }
+               Tostands[i].transform.position = new Vector3(ori_x + (i-ff) * hinder,or_y);
+            Tostands[i].gameObject.SetActive(true);
+        }
+    }
+    public void Appear(int i)
+    {
+        if(i>Tostands.Count) {
+            Debug.Log("NONO");
+            return;
+        }
+        Tostands[i].gameObject.SetActive(true);
+    }
+    public void Return()
+    {
+        int i = 0;
+        for(;i<Tostands.Count;i++)
+        {
+            if (Tostands[i].gameObject.activeSelf)
+            {
+                Tostands[i].gameObject.SetActive(false);
+            }
         }
     }
 }

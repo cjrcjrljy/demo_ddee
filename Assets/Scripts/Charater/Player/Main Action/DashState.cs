@@ -16,6 +16,7 @@ public class DashState : PlayerState
 
     public override void Enter()
     {
+        player.Collider.isTrigger=true;
         player.Hleath.CanbeAttacked = false;
         base.Enter();
         float dir=player.Facingdir;
@@ -23,7 +24,7 @@ public class DashState : PlayerState
         if(player.input.AxisY != 0) {
             dir=player.input.AxisX;
         }
-        player.Setvelocity(dir*3, dir_y*5);
+        player.Setvelocity(dir*9, dir_y*5);
         current_gra = player.rb.gravityScale;
         player.rb.gravityScale=0;
         current_Y=player.rb.velocity.y;
@@ -32,9 +33,9 @@ public class DashState : PlayerState
     public override void Exit()
     {
         base.Exit();
+        player.Collider.isTrigger=false;
         player.rb.gravityScale = current_gra;
         player.Hleath.CanbeAttacked = true;
-        Debug.Log("OUT");
     }
 
     public override void Update()

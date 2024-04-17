@@ -78,7 +78,7 @@ public class Player :Enity
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            TostandManager.RandomInit(2);
+           
             NNTR();
         }
         stateMachine.CurrentState.Update();

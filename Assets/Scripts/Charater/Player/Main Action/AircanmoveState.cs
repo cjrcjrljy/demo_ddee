@@ -10,6 +10,7 @@ public class AircanmoveState : PlayerState
     }
     public override void Enter()
     {
+        player.Collider.sharedMaterial = player.Zero;
         base.Enter();
     }
     public override void Update()
@@ -24,6 +25,7 @@ public class AircanmoveState : PlayerState
     }
     public override void Exit()
     {
+        player.Collider.sharedMaterial = player.ori;
         base.Exit();
     }
 }

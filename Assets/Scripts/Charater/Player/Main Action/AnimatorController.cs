@@ -16,6 +16,7 @@ public class AnimatorController : MonoBehaviour
     }
     public void CanChange()
     {
+       
         player.change_BIG=true;
     }
     public void attackfeel()
