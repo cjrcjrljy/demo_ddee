@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class Player :Enity
 {
 
+    public PhysicsMaterial2D Zer0;
     public float shakeTime;
     public int pauseTime;
     public float strengh;
     public Vector3 position;
     public PlayerInput input;
     public List<SaveFor> sa;
+    public TostandManager TostandManager;
     #region "skill_demo"
     public UI_Caowei uI_1;
     public UI_Caowei uI_2;
@@ -75,7 +77,10 @@ public class Player :Enity
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
+        {
+            TostandManager.RandomInit(2);
             NNTR();
+        }
         stateMachine.CurrentState.Update();
         skillStateMachine.State.UPdate();
     }

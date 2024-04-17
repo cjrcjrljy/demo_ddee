@@ -10,6 +10,7 @@ public class JumpState :AircanmoveState
     public override void Enter()
     {
         base.Enter();
+        player.Collider.sharedMaterial = player.Zero;
         player.Setvelocity(player.rb.velocity.x, player.jumpheigh);
     }
     public override void Update()

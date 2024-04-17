@@ -7,13 +7,14 @@ public class PlayerPrimaryAttack : PlayerState
     public int ComboCounter=0;
     public float comboWindow=2;
     public float LastTimeAttacked;
-
+    public float Gravity;
     public PlayerPrimaryAttack(Player _player, PlayerStateMachine _statemachine, string _animator, PlayerInput input) : base(_player, _statemachine, _animator, input)
     {
     }
 
     public override void Enter()
     {
+        Gravity = player.rb.gravityScale;
         player.Setvelocity(player.rb.velocity.x, player.rb.velocity.y/1.2f);
         if (Time.time > LastTimeAttacked + comboWindow)
             ComboCounter = 0;
@@ -26,7 +27,7 @@ public class PlayerPrimaryAttack : PlayerState
     public override void Exit()
     {
         base.Exit();
-        player.rb.gravityScale = 1;
+        player.rb.gravityScale = Gravity;
         player.change_Skill = false;
         LastTimeAttacked=Time.time; 
         ComboCounter++;
