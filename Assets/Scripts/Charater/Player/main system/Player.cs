@@ -6,8 +6,12 @@ using UnityEngine.UI;
 
 public class Player :Enity
 {
-
+    [Header("for not out")]
+    public GameObject Left;
+    public GameObject Right;
+    [Header("Forcannot")]
     public PhysicsMaterial2D Zer0;
+    [Header("for shakerr")]
     public float shakeTime;
     public int pauseTime;
     public float strengh;
@@ -16,6 +20,7 @@ public class Player :Enity
     public List<SaveFor> sa;
     public TostandManager TostandManager;
     #region "skill_demo"
+    [Header("skill_demo")]
     public UI_Caowei uI_1;
     public UI_Caowei uI_2;
     public UI_Caowei uI_3;
@@ -31,6 +36,8 @@ public class Player :Enity
     public SkillStateMachine skillStateMachine;
     #endregion
     #region"State"
+   
+    [Header("state")] int mid;
     public PlayerStateMachine stateMachine {  get; private set; }
     public IdleState IdleState { get; private set; }
     public MoveState moveState { get; private set; }

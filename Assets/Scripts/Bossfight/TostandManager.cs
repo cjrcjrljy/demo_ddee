@@ -14,8 +14,12 @@ public class TostandManager : MonoBehaviour
     public float Y_sec;
     public float Y_thi;
     public float x_min;
+    public Transform fa;
     private void Awake()
     {
+        fa = new GameObject("parent").transform;
+     
+        fa.parent= transform;
         Y_fir=one.transform.position.y;
         Y_sec=two.transform.position.y;
         Y_thi=three.transform.position.y;
@@ -33,10 +37,10 @@ public class TostandManager : MonoBehaviour
         {
             if (i >= Tostands.Count)
             {
-                GameObject  id= GameObject.Instantiate(tostand);
+                GameObject  id= GameObject.Instantiate(tostand,fa);
                 Tostands.Add(id);
             }
-               Tostands[i].transform.position = new Vector3(ori_x + (i-ff) * hinder,or_y);
+               Tostands[i].transform.position = new Vector3(ori_x + (i-ff+Random.Range(0f,1.5f)) * hinder,or_y);
             Tostands[i].gameObject.SetActive(true);
         }
     }

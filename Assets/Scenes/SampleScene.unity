@@ -433,6 +433,7 @@ MonoBehaviour:
   Dectector: {fileID: 0}
   IsHitted: 0
   Zero: {fileID: 0}
+  detectorForSomething: {fileID: 0}
   ori: {fileID: 0}
   Collider: {fileID: 0}
   animator: {fileID: 0}
@@ -2496,6 +2497,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1351598417}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &896668329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896668330}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &896668330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896668329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 47.32, y: -6.65, z: 0.04008668}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1012599321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,10 +2632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cd88df792ffab4492b1bf633cd6b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StandPools:
-  - parent: {fileID: 0}
-    size: 10
-    prefeb: {fileID: 6448529554203035753, guid: fc4e68a4f783563408def9225e77f902, type: 3}
+  StandPools: []
 --- !u!4 &1120971558
 Transform:
   m_ObjectHideFlags: 0
@@ -2970,6 +2999,7 @@ MonoBehaviour:
   Y_sec: 0
   Y_thi: 0
   x_min: 0
+  fa: {fileID: 0}
 --- !u!4 &1397108180
 Transform:
   m_ObjectHideFlags: 0
@@ -3365,6 +3395,7 @@ MonoBehaviour:
   Dectector: {fileID: 0}
   IsHitted: 0
   Zero: {fileID: 6200000, guid: e173bcda979037c48a9cc79f44cb68a3, type: 2}
+  detectorForSomething: {fileID: 0}
   ori: {fileID: 0}
   Collider: {fileID: 0}
   animator: {fileID: 0}
@@ -3372,6 +3403,8 @@ MonoBehaviour:
   Hleath: {fileID: 0}
   FacingRight: 0
   Facingdir: 1
+  Left: {fileID: 372009429}
+  Right: {fileID: 298864529}
   Zer0: {fileID: 0}
   shakeTime: 1
   pauseTime: 1
@@ -3748,6 +3781,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4346927586129342814, guid: fc4e68a4f783563408def9225e77f902, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6448529554203035753, guid: fc4e68a4f783563408def9225e77f902, type: 3}
       propertyPath: m_Name
       value: tt (3)
@@ -3975,4 +4012,4 @@ SceneRoots:
   - {fileID: 2006228920}
   - {fileID: 1259188916}
   - {fileID: 2003583466}
-  - {fileID: 1437808157}
+
