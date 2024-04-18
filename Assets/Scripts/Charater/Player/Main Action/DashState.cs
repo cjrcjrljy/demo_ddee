@@ -40,9 +40,14 @@ public class DashState : PlayerState
 
     public override void Update()
     {
-      //  player.Setvelocity(player.rb.velocity.x, current_Y);
+        if (player.rb.position.x <= player.Left.transform.position.x+2
+          || player.rb.position.x >= player.Right.transform.position.x-2)
+        {
+            player.Setvelocity(-player.rb.velocity.x, player.rb.velocity.y);
+        }
+        //  player.Setvelocity(player.rb.velocity.x, current_Y);
 
-        if (player.input.Attack)//仅供方便没有动画是的demo，后会删除
+        if (player.input.Attack||player.input.Jump)//仅供方便没有动画是的demo，后会删除
         {
             TriggerCalled = true;
         }

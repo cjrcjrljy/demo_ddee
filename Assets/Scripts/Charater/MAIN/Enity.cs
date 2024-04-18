@@ -5,12 +5,14 @@ using UnityEngine.Windows;
 
 public class Enity : MonoBehaviour
 {
+    [Header("Must")]
     #region "check"
     public GroundDectector Dectector;
     public bool IsGrounded => Dectector.Isgound;
     public bool IsFailing => rb.velocity.y < 0f && !IsGrounded;
     public bool IsHitted;
     public PhysicsMaterial2D Zero;
+    public GameObject detectorForSomething;
     public PhysicsMaterial2D ori;
     public  Collider2D Collider;
     #endregion

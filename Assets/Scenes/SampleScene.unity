@@ -433,6 +433,7 @@ MonoBehaviour:
   Dectector: {fileID: 0}
   IsHitted: 0
   Zero: {fileID: 0}
+  detectorForSomething: {fileID: 0}
   ori: {fileID: 0}
   Collider: {fileID: 0}
   animator: {fileID: 0}
@@ -2945,6 +2946,7 @@ MonoBehaviour:
   Y_sec: 0
   Y_thi: 0
   x_min: 0
+  fa: {fileID: 0}
 --- !u!4 &1397108180
 Transform:
   m_ObjectHideFlags: 0
@@ -3314,6 +3316,7 @@ MonoBehaviour:
   Dectector: {fileID: 0}
   IsHitted: 0
   Zero: {fileID: 6200000, guid: e173bcda979037c48a9cc79f44cb68a3, type: 2}
+  detectorForSomething: {fileID: 0}
   ori: {fileID: 0}
   Collider: {fileID: 0}
   animator: {fileID: 0}
@@ -3321,6 +3324,8 @@ MonoBehaviour:
   Hleath: {fileID: 0}
   FacingRight: 0
   Facingdir: 1
+  Left: {fileID: 372009429}
+  Right: {fileID: 298864529}
   Zer0: {fileID: 0}
   shakeTime: 1
   pauseTime: 1
