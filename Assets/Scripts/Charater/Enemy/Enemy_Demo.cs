@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy_Demo : MonoBehaviour
+public class Enemy_Demo :Enemy
 {
-    public bool trigger;
-    public HleathSystem hleathSystem;
-    public Animator animator;
-    private void Awake()
+ 
+    public override void Awake()
     {
-        hleathSystem=GetComponent<HleathSystem>();
-        animator = GetComponentInChildren<Animator>();
-        trigger = false;
+        base.Awake();
+      
     } 
     void Start()
     {

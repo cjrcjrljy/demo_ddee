@@ -27,9 +27,9 @@ public class TostandManager : MonoBehaviour
     }
     private void Start()
     {
-        Init_(x_min, Y_fir, 2, 0);
-        Init_(x_min,Y_sec, 2, 2);
-        Init_(x_min,Y_thi, 2, 4);
+        //Init_(x_min, Y_fir, 2, 0);
+        //Init_(x_min,Y_sec, 2, 2);
+        //Init_(x_min,Y_thi, 2, 4);
     }
     public void Init_(float ori_x,float or_y,int much,int ff)
     {

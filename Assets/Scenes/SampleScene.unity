@@ -290,11 +290,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 37365631}
-  - component: {fileID: 37365634}
   - component: {fileID: 37365633}
   - component: {fileID: 37365632}
   - component: {fileID: 37365637}
   - component: {fileID: 37365638}
+  - component: {fileID: 37365639}
   m_Layer: 0
   m_Name: Boss_ai
   m_TagString: Untagged
@@ -390,18 +390,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &37365634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37365630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -638047543, guid: da41a8dd3b5ec434a802d9b5a2a0a777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &37365637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,10 +402,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616575f8f758a3745becd9af85ea5723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHleath: 0
+  maxHleath: 100
   currentHleath: 0
   CanbeAttacked: 0
   CD_for_rec: 0
+  Fx: {fileID: 0}
 --- !u!114 &37365638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,6 +431,22 @@ MonoBehaviour:
   FacingRight: 0
   Facingdir: 1
   StateMachine: {fileID: 0}
+  trigger: 0
+--- !u!114 &37365639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37365630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1beebcacb7dba34ebc15320c5616ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 0}
+  HitMat: {fileID: 2100000, guid: 9a94574718081564399c5225069a4104, type: 2}
+  originalMat: {fileID: 0}
 --- !u!1 &38715001
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +460,7 @@ GameObject:
   - component: {fileID: 38715004}
   - component: {fileID: 38715003}
   - component: {fileID: 38715002}
+  - component: {fileID: 38715007}
   m_Layer: 7
   m_Name: enemy
   m_TagString: Untagged
@@ -478,6 +484,7 @@ MonoBehaviour:
   currentHleath: 0
   CanbeAttacked: 0
   CD_for_rec: 0
+  Fx: {fileID: 0}
 --- !u!70 &38715003
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -552,9 +559,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d0c7e16d5236a4dafd00f313a4db7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 0
-  hleathSystem: {fileID: 0}
+  Dectector: {fileID: 0}
+  IsHitted: 0
+  Zero: {fileID: 0}
+  detectorForSomething: {fileID: 0}
+  ori: {fileID: 0}
+  Collider: {fileID: 0}
   animator: {fileID: 0}
+  rb: {fileID: 0}
+  Hleath: {fileID: 0}
+  FacingRight: 0
+  Facingdir: 1
+  StateMachine: {fileID: 0}
+  trigger: 0
 --- !u!4 &38715006
 Transform:
   m_ObjectHideFlags: 0
@@ -571,6 +588,21 @@ Transform:
   - {fileID: 43493700}
   m_Father: {fileID: 1351598417}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &38715007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38715001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1beebcacb7dba34ebc15320c5616ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 0}
+  HitMat: {fileID: 2100000, guid: 9a94574718081564399c5225069a4104, type: 2}
+  originalMat: {fileID: 0}
 --- !u!1 &43493699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3377,6 +3409,7 @@ MonoBehaviour:
   currentHleath: 0
   CanbeAttacked: 0
   CD_for_rec: 0
+  Fx: {fileID: 0}
 --- !u!114 &1627728105
 MonoBehaviour:
   m_ObjectHideFlags: 0

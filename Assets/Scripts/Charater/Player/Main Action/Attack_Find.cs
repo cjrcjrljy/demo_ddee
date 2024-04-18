@@ -10,15 +10,15 @@ public class Attack_Find : MonoBehaviour
     public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if(collision.gameObject.TryGetComponent<Enemy_Demo>(out Enemy_Demo demo))
+        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
             Debug.Log("attc");
             Debug.Log(player._A.currrec);
 
             if (player.Hleath.currentHleath < player.Hleath.maxHleath)
                 player.AttackState. recc(10);
-            demo.hleathSystem.Damage(damage);
-            demo.EnterHitted();
+            demo.Hleath.Damage(damage);
+        
         }
     }
 }

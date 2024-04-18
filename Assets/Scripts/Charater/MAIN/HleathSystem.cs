@@ -8,6 +8,11 @@ public class HleathSystem : MonoBehaviour
     public float currentHleath;
     public bool CanbeAttacked;
     public float CD_for_rec;
+    public EntityFx Fx;
+    private void Awake()
+    {
+        Fx = GetComponent<EntityFx>();
+    }
     public void OnEnable()
     {
         CD_for_rec = 0;
@@ -20,6 +25,7 @@ public class HleathSystem : MonoBehaviour
         {
             return;
         }
+        StartCoroutine(Fx.FlashFX());
         currentHleath-=damage;
         if (currentHleath <= 0)
         {
