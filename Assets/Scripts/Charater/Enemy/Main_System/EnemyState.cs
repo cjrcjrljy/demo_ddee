@@ -9,6 +9,10 @@ public class EnemyState
     public bool TriggerCalled;
     public string AnimatorName;
     public float StateTimer;
+    public bool Focus;
+
+    public float movespeed;
+
     public EnemyState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName)
     {
         this.stateMahine = stateMahine;
@@ -25,6 +29,12 @@ public class EnemyState
     public virtual void Update()
     {
         StateTimer-= Time.deltaTime;
+        if(enemy.IsFindPlayer)
+        {
+            Debug.Log("find");
+            enemy.StateMachine.ChangeState(enemy.fouc);
+
+        }
     }
     
     public virtual void Exit()

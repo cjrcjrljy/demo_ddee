@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Ene_ani : MonoBehaviour
 {
-    public Enemy_Demo demo;
+    public Enemy demo;
+    public Animator animator;
     private void Awake()
     {
-        
-        demo = GetComponentInParent<Enemy_Demo>();
+        animator=GetComponent<Animator>();
+        demo = GetComponentInParent<Enemy>();
     }
-    public void sset()
+    public void PPlay(string aniname)
     {
-        demo.animator.SetBool("Hitted", false);
-
+        animator.speed = 0;
+       animator.Play(aniname);
+        animator.speed= 1;
     }
 }

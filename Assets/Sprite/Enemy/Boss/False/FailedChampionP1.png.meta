@@ -500,6 +500,153 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_18
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 5386
+        width: 594
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808f22cba42fee4439782f131366bae5
+      internalID: 1320466084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_19
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 5387
+        width: 590
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f891e55ea12a14297f5156a5ea03ef
+      internalID: -863372012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_20
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 5383
+        width: 590
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb2e80b40e8dde418d68c1d64ddb5ae
+      internalID: 2049638149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_21
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5027
+        width: 582
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2591e538a86f4e64fa29f7cab4760d4c
+      internalID: 2139179656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_22
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 5025
+        width: 586
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25f20d75843a0046a6dd52e43205115
+      internalID: -1580659584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_23
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 5021
+        width: 587
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1700af533855c040bf666e8ca00ded7
+      internalID: 1399919393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_24
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 5019
+        width: 594
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a703918e60bfa4ab25e69a07b5e321
+      internalID: -1094041259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -521,7 +668,14 @@ TextureImporter:
       FailedChampionP1_15: 1532101329
       FailedChampionP1_16: 1777564978
       FailedChampionP1_17: 1182919238
+      FailedChampionP1_18: 1320466084
+      FailedChampionP1_19: -863372012
       FailedChampionP1_2: 1547008791
+      FailedChampionP1_20: 2049638149
+      FailedChampionP1_21: 2139179656
+      FailedChampionP1_22: -1580659584
+      FailedChampionP1_23: 1399919393
+      FailedChampionP1_24: -1094041259
       FailedChampionP1_3: 993027327
       FailedChampionP1_4: 483515286
       FailedChampionP1_5: -233135809

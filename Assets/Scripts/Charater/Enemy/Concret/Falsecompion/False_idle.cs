@@ -7,6 +7,27 @@ public class False_idle : EnemyState
     public False_idle(EnemyStateMahine stateMahine, Enemy enemy, string animatorName) : base(stateMahine, enemy, animatorName)
     {
     }
-    
+
+    public override void Enter()
+    {
+        base.Enter();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    public override void Update()
+    {
+        Debug.Log("idle");
+        if (enemy.IsFindPlayer)
+        {
+            Debug.Log("find");
+            enemy.StateMachine.ChangeState(enemy.fouc);
+
+        }
+        base.Update();
+    }
 }
 

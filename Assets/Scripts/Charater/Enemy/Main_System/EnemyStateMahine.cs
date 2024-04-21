@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyStateMahine : MonoBehaviour
+[System.Serializable]
+public class EnemyStateMahine 
 {
-    public EnemyState CurrrentState;
+    public EnemyState CurrrentState {  get; private set; }
     public void Initialize(EnemyState _enemyState)
     {
         CurrrentState = _enemyState;

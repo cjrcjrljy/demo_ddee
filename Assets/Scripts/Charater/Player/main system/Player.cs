@@ -11,6 +11,15 @@ public class Player :Enity
     public GameObject Right;
     [Header("Forcannot")]
     public PhysicsMaterial2D Zer0;
+    int mid;
+    public PlayerStateMachine stateMachine ;
+    public IdleState IdleState { get; private set; }
+    public MoveState moveState { get; private set; }
+    public PlayerPrimaryAttack AttackState { get; private set; }
+    public DashState dashState { get; private set; }
+    public JumpState jumpState { get; private set; }
+    public Jump_fall jump_Fall { get; private set; }
+    public Jump_land jump_Land { get; private set; }
     [Header("for shakerr")]
     public float shakeTime;
     public int pauseTime;
@@ -37,15 +46,6 @@ public class Player :Enity
     #endregion
     #region"State"
    
-    [Header("state")] int mid;
-    public PlayerStateMachine stateMachine {  get; private set; }
-    public IdleState IdleState { get; private set; }
-    public MoveState moveState { get; private set; }
-    public PlayerPrimaryAttack AttackState { get; private set; }
-    public DashState dashState { get; private set; }
-    public JumpState jumpState { get; private set; }
-    public Jump_fall jump_Fall { get; private set; }
-    public Jump_land jump_Land { get; private set; }
     #endregion
     #region "Move"
     public float jumpheigh;
