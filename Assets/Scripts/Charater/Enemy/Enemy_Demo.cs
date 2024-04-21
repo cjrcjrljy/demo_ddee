@@ -19,6 +19,7 @@ public class Enemy_Demo : Enemy
     public override void Awake()
     {
         base.Awake();
+        fouc = new Fouc(StateMachine, this, "Focus");
         forState = new SearchingForState(StateMachine, this, "Search");
         StateMachine.Initialize(forState);
     }

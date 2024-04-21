@@ -578,12 +578,12 @@ MonoBehaviour:
   player: {fileID: 0}
   trigger: 0
   findPlayer: {fileID: 0}
-  Movespeed: 0
+  Movespeed: 5
   Checkwall: {fileID: 1140934864}
   Wall:
     serializedVersion: 2
     m_Bits: 8
-  checkwalldis: 0
+  checkwalldis: 1
 --- !u!4 &38715006
 Transform:
   m_ObjectHideFlags: 0
