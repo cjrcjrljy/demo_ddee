@@ -12,7 +12,6 @@ public class Attack_Find : MonoBehaviour
         
         if(collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
-            Debug.Log("attc");
             Debug.Log(player._A.currrec);
 
             if (player.Hleath.currentHleath < player.Hleath.maxHleath)
