@@ -8,8 +8,6 @@ public class Attack_up : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Enemy_Demo>(out Enemy_Demo demo))
         {
-            demo.EnterHitted();
-
             demo.trigger = true;
 
         }

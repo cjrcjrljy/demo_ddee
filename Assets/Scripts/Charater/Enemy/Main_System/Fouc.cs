@@ -10,7 +10,6 @@ public class Fouc : EnemyState
 
     public override void Enter()
     {
-        Debug.Log("fff");
         base.Enter();
     }
 
@@ -21,7 +20,8 @@ public class Fouc : EnemyState
 
     public override void Update()
     {
-        enemy.FacingPlayer();
+        enemyBase.FacingPlayer();
+      
         base.Update();
     }
 }

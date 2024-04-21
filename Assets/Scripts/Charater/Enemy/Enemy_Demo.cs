@@ -3,26 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy_Demo :Enemy
+public class Enemy_Demo : Enemy
 {
- 
+    public GameObject Checkwall;
+    public LayerMask Wall;
+    public float checkwalldis;
+    public bool iswall
+    {
+        get
+        {
+            return Physics2D.Raycast(Checkwall.transform.position, Vector2.right, Facingdir * checkwalldis, Wall);
+        }
+    }
+    public SearchingForState forState;
     public override void Awake()
     {
         base.Awake();
-      
-    } 
-    void Start()
-    {
-      
+        forState = new SearchingForState(StateMachine, this, "Search");
+        StateMachine.Initialize(forState);
     }
 
-  
-    void Update()
+    public override void Update()
     {
-      
+        base.Update();
+        if (iswall)
+        {
+            Filp();
+        }
     }
-    public void EnterHitted()
+    private void OnDrawGizmos()
     {
-        animator.SetBool("Hitted", true);
+        Gizmos.DrawLine(Checkwall.transform.position, new Vector3(Checkwall.transform.position.x + checkwalldis * Facingdir,
+            Checkwall.transform.position.y));
     }
 }

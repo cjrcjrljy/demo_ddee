@@ -11,6 +11,7 @@ public class Enemy : Enity
     public bool trigger;
     public Fouc fouc;
     public FindPlayer findPlayer;
+    public float Movespeed;
     public bool IsFindPlayer => findPlayer.Findpp;
     public override void Awake()
     {
@@ -25,7 +26,7 @@ public class Enemy : Enity
     }
     public virtual  void Update()
     {
-        Debug.Log(IsFindPlayer);
+      
         StateMachine.CurrrentState.Update();
     }
     public void FacingPlayer()
@@ -39,4 +40,5 @@ public class Enemy : Enity
             if (FacingRight)
             Filp();
     }
+  
 }

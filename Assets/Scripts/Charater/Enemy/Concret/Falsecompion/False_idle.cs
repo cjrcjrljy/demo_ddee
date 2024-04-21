@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class False_idle : EnemyState
 {
-    public False_idle(EnemyStateMahine stateMahine, Enemy enemy, string animatorName) : base(stateMahine, enemy, animatorName)
+    public false_champion false_;
+    public False_idle(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, false_champion false_) : base(stateMahine, enemy, animatorName)
     {
+        this.false_ = false_;
     }
 
     public override void Enter()
@@ -20,11 +22,10 @@ public class False_idle : EnemyState
 
     public override void Update()
     {
-        Debug.Log("idle");
-        if (enemy.IsFindPlayer)
+       
+        if (enemyBase.IsFindPlayer)
         {
-            Debug.Log("find");
-            enemy.StateMachine.ChangeState(enemy.fouc);
+            enemyBase.StateMachine.ChangeState(enemyBase.fouc);
 
         }
         base.Update();

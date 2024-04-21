@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyState
 {
     public EnemyStateMahine stateMahine;
-    public Enemy enemy;
+    public Enemy enemyBase;
     public bool TriggerCalled;
     public string AnimatorName;
     public float StateTimer;
@@ -16,30 +16,30 @@ public class EnemyState
     public EnemyState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName)
     {
         this.stateMahine = stateMahine;
-        this.enemy = enemy;
+        this.enemyBase = enemy;
         AnimatorName = animatorName;
     }
 
     public virtual void Enter()
     {
         TriggerCalled = false;
-        enemy.animator.SetBool(AnimatorName, true);
+        enemyBase.animator.SetBool(AnimatorName, true);
 
     }
     public virtual void Update()
     {
         StateTimer-= Time.deltaTime;
-        if(enemy.IsFindPlayer)
+        if(enemyBase.IsFindPlayer)
         {
-            Debug.Log("find");
-            enemy.StateMachine.ChangeState(enemy.fouc);
+ 
+            enemyBase.StateMachine.ChangeState(enemyBase.fouc);
 
         }
     }
     
     public virtual void Exit()
     {
-        enemy.animator.SetBool(AnimatorName, false);
+        enemyBase.animator.SetBool(AnimatorName, false);
     }
 
 }

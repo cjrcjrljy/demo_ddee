@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirState : Fouc
+public class SearchingForState : EnemyState
 {
-    public AirState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName) : base(stateMahine, enemy, animatorName)
+    public SearchingForState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName) : base(stateMahine, enemy, animatorName)
     {
     }
-    public float jumphei;
+
     public override void Enter()
     {
-        enemyBase.Setvelocity(movespeed / 1.2f * enemyBase.Facingdir, jumphei);
         base.Enter();
     }
 
@@ -21,6 +20,7 @@ public class AirState : Fouc
 
     public override void Update()
     {
+        enemyBase.Setvelocity(enemyBase.Movespeed* enemyBase.Facingdir, enemyBase.rb.velocity.y);
         base.Update();
     }
 }

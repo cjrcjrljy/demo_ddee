@@ -11,8 +11,8 @@ public class false_champion : Enemy
     {
         base.Awake();
         fouc = new Fouc(this.StateMachine, this, "Focus");
-        movestate = new False_move(StateMachine, this, "Move");
-        idlestate = new False_idle(StateMachine, this, "Idle");
+        movestate = new False_move(StateMachine, this, "Move", this);
+        idlestate = new False_idle(StateMachine, this, "Idle",this);
         StateMachine.Initialize(idlestate);
     }
     public override void Update()
