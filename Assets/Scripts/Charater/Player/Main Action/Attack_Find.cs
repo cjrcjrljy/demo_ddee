@@ -9,16 +9,16 @@ public class Attack_Find : MonoBehaviour
     public Player player;
     public void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        //if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
-        //{
-        //    Debug.Log(player._A.currrec);
 
-        //    if (player.Hleath.currentHleath < player.Hleath.maxHleath)
-        //        player.AttackState.recc(10);
-        //    demo.Hleath.Damage(damage);
+        if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
+        {
+            Debug.Log(player._A.currrec);
 
-        //}
+            if (player.Hleath.currentHleath < player.Hleath.maxHleath)
+                player.AttackState.recc(10);
+            demo.Hleath.Damage(damage);
+
+        }
     }
     public void OnTriggerStay2D(Collider2D collision)
     {

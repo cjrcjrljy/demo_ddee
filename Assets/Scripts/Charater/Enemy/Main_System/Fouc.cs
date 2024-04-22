@@ -10,6 +10,7 @@ public class Fouc : EnemyState
 
     public override void Enter()
     {
+        enemyBase.Setvelocity(enemyBase.Movespeed * 3.2f * enemyBase.Facingdir, enemyBase.rb.velocity.y);
         base.Enter();
     }
 

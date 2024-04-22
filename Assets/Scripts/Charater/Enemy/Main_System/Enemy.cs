@@ -13,6 +13,8 @@ public class Enemy : Enity
     public FindPlayer findPlayer;
     public float Movespeed;
     public bool IsFindPlayer => findPlayer.Findpp;
+    [Header("Attack")]
+    public EnemyAttack[] enemyAttacks;
     public override void Awake()
     {
         base.Awake();

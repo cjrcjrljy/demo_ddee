@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class Player :Enity
 {
+
+    public PhysicsMaterial2D Zero;
+    public PhysicsMaterial2D ori;
+    public Collider2D Collider;
+
+
     [Header("for not out")]
     public GameObject Left;
     public GameObject Right;
@@ -54,6 +60,8 @@ public class Player :Enity
     #region "Normal"
     public override void  Awake()
     {
+        Collider = GetComponent<Collider2D>();
+        ori = Collider.sharedMaterial;
         sa = new List<SaveFor>();
         base.Awake();
         input=GetComponent<PlayerInput>();

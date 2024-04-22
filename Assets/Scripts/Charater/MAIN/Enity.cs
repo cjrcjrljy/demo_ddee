@@ -11,10 +11,7 @@ public class Enity : MonoBehaviour
     public bool IsGrounded => Dectector.Isgound;
     public bool IsFailing => rb.velocity.y < 0f && !IsGrounded;
     public bool IsHitted;
-    public PhysicsMaterial2D Zero;
     public GameObject detectorForSomething;
-    public PhysicsMaterial2D ori;
-    public  Collider2D Collider;
     #endregion
 
 
@@ -26,12 +23,11 @@ public class Enity : MonoBehaviour
     public int Facingdir = 1;
     public virtual void Awake()
     {
-        Collider = GetComponent<Collider2D>();
         Dectector = GetComponentInChildren<GroundDectector>();
         Hleath = GetComponent<HleathSystem>();
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        ori = Collider.sharedMaterial;
+     
     }
     public void Facingontroller()
     {

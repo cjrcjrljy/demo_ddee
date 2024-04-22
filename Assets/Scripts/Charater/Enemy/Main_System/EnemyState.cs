@@ -29,12 +29,6 @@ public class EnemyState
     public virtual void Update()
     {
         StateTimer-= Time.deltaTime;
-        if(enemyBase.IsFindPlayer)
-        {
- 
-            enemyBase.StateMachine.ChangeState(enemyBase.fouc);
-
-        }
     }
     
     public virtual void Exit()
