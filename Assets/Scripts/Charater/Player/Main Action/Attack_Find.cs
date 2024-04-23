@@ -12,8 +12,6 @@ public class Attack_Find : MonoBehaviour
 
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
-            Debug.Log(player._A.currrec);
-
             if (player.Hleath.currentHleath < player.Hleath.maxHleath)
                 player.AttackState.recc(10);
             demo.Hleath.Damage(damage);
@@ -22,7 +20,6 @@ public class Attack_Find : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
-            Debug.Log(player._A.currrec);
 
         //if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         //{

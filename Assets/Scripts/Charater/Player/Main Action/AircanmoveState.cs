@@ -21,7 +21,7 @@ public class AircanmoveState : PlayerState
         {
             StateMachine.ChangeState(player.AttackState);
         }
-        player.Setvelocity(player.input.AxisX *2, player.rb.velocity.y);
+        player.Setvelocity(player.input.AxisX *player.Movespeed/1.1f, player.rb.velocity.y);
     }
     public override void Exit()
     {

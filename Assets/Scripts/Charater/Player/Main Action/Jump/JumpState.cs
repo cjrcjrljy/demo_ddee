@@ -10,8 +10,8 @@ public class JumpState :AircanmoveState
     public override void Enter()
     {
         base.Enter();
+        player.Setvelocity(player.input.AxisX, player.jumpheigh);
 
-        player.Setvelocity(player.rb.velocity.x, player.jumpheigh);
     }
     public override void Update()
     {

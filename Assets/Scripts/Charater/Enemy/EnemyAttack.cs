@@ -9,7 +9,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<Player>(out Player player))
         {
-            Debug.Log("damage!!");
+            
             player.Hleath.Damage(damage);
         }
         
