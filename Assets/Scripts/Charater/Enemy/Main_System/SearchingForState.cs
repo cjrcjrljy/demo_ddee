@@ -25,7 +25,7 @@ public class SearchingForState : EnemyState
         enemyBase.Setvelocity(enemyBase.Movespeed* enemyBase.Facingdir, enemyBase.rb.velocity.y);
         if (enemyBase.IsFindPlayer)
         {
-            enemyBase.StateMachine.ChangeState(enemyBase.fouc);
+          //  enemyBase.StateMachine.ChangeState(enemyBase.fouc);
 
         }
         base.Update();

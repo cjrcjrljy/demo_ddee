@@ -8,6 +8,9 @@ public class Enemy_Demo : Enemy
     public GameObject Checkwall;
     public LayerMask Wall;
     public float checkwalldis;
+    public WaitForSeconds Backtime;
+    public Normal_attack _Attack;
+    public float bbacktime;
     public bool iswall
     {
         get
@@ -19,6 +22,8 @@ public class Enemy_Demo : Enemy
     public override void Awake()
     {
         base.Awake();
+        _Attack = new Normal_attack(StateMachine, this, "Attack", this);
+        Backtime = new WaitForSeconds(bbacktime);
         fouc = new Fouc(StateMachine, this, "Focus");
         forState = new SearchingForState(StateMachine, this, "Search");
         StateMachine.Initialize(forState);
@@ -27,6 +32,8 @@ public class Enemy_Demo : Enemy
     public override void Update()
     {
         base.Update();
+        if (IsFindPlayer)
+            StateMachine.ChangeState(_Attack);
         if (iswall)
         {
             Filp();

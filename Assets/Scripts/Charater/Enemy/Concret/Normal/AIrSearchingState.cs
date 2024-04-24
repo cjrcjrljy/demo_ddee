@@ -39,8 +39,7 @@ public class AIrSearchingState : EnemyState
         {
             if(Vector3.Distance(airEnemy.transform.position, targetPosition) >Mathf.Epsilon)
             {
-              Debug.Log(airEnemy.transform.position);
-            Debug.Log(targetPosition);
+           
               airEnemy.transform.position=  Vector3.MoveTowards(airEnemy.transform.position, 
                     targetPosition, airEnemy.Movespeed * Time.deltaTime);
             }
