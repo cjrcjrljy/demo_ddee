@@ -272,6 +272,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   checkwalldis: 1
+  bbacktime: 2
 --- !u!50 &2435624382428838523
 Rigidbody2D:
   serializedVersion: 4

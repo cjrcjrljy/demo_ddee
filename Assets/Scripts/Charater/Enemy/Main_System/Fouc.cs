@@ -10,7 +10,7 @@ public class Fouc : EnemyState
 
     public override void Enter()
     {
-        enemyBase.Setvelocity(enemyBase.Movespeed * 3.2f * enemyBase.Facingdir, enemyBase.rb.velocity.y);
+       
         base.Enter();
     }
 
@@ -21,8 +21,12 @@ public class Fouc : EnemyState
 
     public override void Update()
     {
-        enemyBase.FacingPlayer();
-      
+       
+      if(enemyBase.TryGetComponent<Enemy_Demo>(out Enemy_Demo attack))
+        {
+            enemyBase.StateMachine.ChangeState(attack.normalattackstate);
+                
+         }
         base.Update();
     }
 }

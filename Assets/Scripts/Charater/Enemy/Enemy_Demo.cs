@@ -9,7 +9,7 @@ public class Enemy_Demo : Enemy
     public LayerMask Wall;
     public float checkwalldis;
     public WaitForSeconds Backtime;
-    public Normal_attack _Attack;
+    public Normal_attack normalattackstate;
     public float bbacktime;
     public bool iswall
     {
@@ -18,22 +18,20 @@ public class Enemy_Demo : Enemy
             return Physics2D.Raycast(Checkwall.transform.position, Vector2.right, Facingdir * checkwalldis, Wall);
         }
     }
-    public SearchingForState forState;
+    public SearchingForState searchingstate;
     public override void Awake()
     {
         base.Awake();
-        _Attack = new Normal_attack(StateMachine, this, "Attack", this);
+        normalattackstate = new Normal_attack(StateMachine, this, "Attack", this);
         Backtime = new WaitForSeconds(bbacktime);
         fouc = new Fouc(StateMachine, this, "Focus");
-        forState = new SearchingForState(StateMachine, this, "Search");
-        StateMachine.Initialize(forState);
+        searchingstate = new SearchingForState(StateMachine, this, "Search");
+        StateMachine.Initialize(searchingstate);
     }
 
     public override void Update()
     {
         base.Update();
-        if (IsFindPlayer)
-            StateMachine.ChangeState(_Attack);
         if (iswall)
         {
             Filp();
