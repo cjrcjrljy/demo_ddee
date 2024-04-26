@@ -13,7 +13,7 @@ public class Normal_attack : EnemyState
 
     public override void Enter()
     {
-        Debug.Log("ININ");
+    
         base.Enter();
       
     }

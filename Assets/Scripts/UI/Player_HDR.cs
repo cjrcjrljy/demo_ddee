@@ -7,8 +7,8 @@ public class Player_HDR :stasHDr
     
     public override void Awake()
     {
-
         base.Awake();
+    
     }
     public override void Update()
     {

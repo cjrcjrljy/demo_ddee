@@ -34,15 +34,16 @@ public class HleathSystem : MonoBehaviour
     }
     public void Die()
     {
-        if (currentHleath < 0)
+        if (currentHleath <= 0)
         {
             currentHleath = 0;
-        }
         gameObject.SetActive(false);
+        }
     }
 
     private void Update()
     {
+        Die();
         CD_for_rec -= Time.deltaTime;  
     }
     /// <summary>
