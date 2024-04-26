@@ -29,6 +29,7 @@ public class EnemyState
     public virtual void Update()
     {
         StateTimer-= Time.deltaTime;
+       
     }
     
     public virtual void Exit()

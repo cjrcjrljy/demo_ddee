@@ -25,7 +25,7 @@ public class Enemy_Demo : Enemy
         normalattackstate = new Normal_attack(StateMachine, this, "Attack", this);
         Backtime = new WaitForSeconds(bbacktime);
         fouc = new Fouc(StateMachine, this, "Focus");
-        searchingstate = new SearchingForState(StateMachine, this, "Search");
+        searchingstate = new SearchingForState(StateMachine, this, "Ilde");
         StateMachine.Initialize(searchingstate);
     }
 

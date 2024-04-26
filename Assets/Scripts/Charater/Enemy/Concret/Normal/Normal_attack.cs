@@ -13,8 +13,6 @@ public class Normal_attack : EnemyState
 
     public override void Enter()
     {
-        demo.StartCoroutine(WaitforBack());
-        enemyBase.Setvelocity(enemyBase.Movespeed * 3.2f * enemyBase.Facingdir, enemyBase.rb.velocity.y);
         Debug.Log("ININ");
         base.Enter();
       
@@ -23,17 +21,15 @@ public class Normal_attack : EnemyState
     public override void Exit()
     {
         base.Exit();
-      demo.StopCoroutine(WaitforBack());
-    }
+   }
 
     public override void Update()
     {
         base.Update();
+        if (TriggerCalled)
+        {
+            demo.StateMachine.ChangeState(demo.searchingstate);
+        }
         enemyBase.FacingPlayer();
-    }
-    IEnumerator WaitforBack()
-    {
-        yield return demo.Backtime;
-        demo.StateMachine.ChangeState(demo.searchingstate);
     }
 }

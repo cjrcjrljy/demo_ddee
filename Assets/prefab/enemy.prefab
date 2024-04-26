@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5831925726771098791}
   - component: {fileID: 5978999269457631304}
   - component: {fileID: 8745278574599235847}
-  - component: {fileID: 7734109210319541155}
+  - component: {fileID: 5070643841936954609}
   m_Layer: 0
   m_Name: ani
   m_TagString: Untagged
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7734109210319541155
+--- !u!114 &5070643841936954609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,11 +116,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 634407958976784957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306878159b78976499e58f3addbba675, type: 3}
+  m_Script: {fileID: 11500000, guid: 2385451dd828a914c996fd00c483f1ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   demo: {fileID: 0}
   animator: {fileID: 0}
+  enemyBase: {fileID: 0}
 --- !u!1 &1560385676675531619
 GameObject:
   m_ObjectHideFlags: 0
