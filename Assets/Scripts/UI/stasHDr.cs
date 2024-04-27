@@ -11,7 +11,7 @@ public class stasHDr : MonoBehaviour
     public float currentfix=1;
     public virtual void Awake()
     {
-        image = GetComponentInChildren<Image>();
+    
         canvas = GetComponent<Canvas>();
         canvas.worldCamera = Camera.main;
 

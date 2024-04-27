@@ -44,6 +44,8 @@ public class PlayerPrimaryAttack : PlayerState
     }
     public void recc(float rec)
     {
+        if (!player.gameObject.activeSelf)
+            return;
         if (player._A.currrec < player._A.maxrec)
             player.StartCoroutine(player._A.Hit_andre(rec));
     }
