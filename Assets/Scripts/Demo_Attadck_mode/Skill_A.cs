@@ -41,6 +41,7 @@ public class Skill_A : SkillState
         if (player.input.Realse&&ChangeTime<0)
         {
             player.Hleath.Recevery(20);
+            Debug.Log("reve");
             stateMachine.ChangeState(player.ready);
             Change_ani(player.uI_1);
         }

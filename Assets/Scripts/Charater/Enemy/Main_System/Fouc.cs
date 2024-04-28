@@ -27,6 +27,8 @@ public class Fouc : EnemyState
             enemyBase.StateMachine.ChangeState(attack.normalattackstate);
                 
          }
+        if (enemyBase.TryGetComponent<RemoteEnemy>(out RemoteEnemy remoteEnemy))
+            enemyBase.StateMachine.ChangeState(remoteEnemy.hootState);
         base.Update();
     }
 }

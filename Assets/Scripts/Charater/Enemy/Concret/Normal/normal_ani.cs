@@ -18,4 +18,5 @@ public class normal_ani :Ene_ani
     {
         enemyBase.StateMachine.CurrrentState.TriggerCalled = true;
     }
+
 }

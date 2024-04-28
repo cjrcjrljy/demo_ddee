@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player :Enity
+public class Player : Enity
 {
 
     public PhysicsMaterial2D Zero;
@@ -18,7 +18,7 @@ public class Player :Enity
     [Header("Forcannot")]
     public PhysicsMaterial2D Zer0;
     int mid;
-    public PlayerStateMachine stateMachine ;
+    public PlayerStateMachine stateMachine;
     public IdleState IdleState { get; private set; }
     public MoveState moveState { get; private set; }
     public PlayerPrimaryAttack AttackState { get; private set; }
@@ -34,6 +34,8 @@ public class Player :Enity
     public PlayerInput input;
     public List<SaveFor> sa;
     public TostandManager TostandManager;
+    [Header("referenceAttack")]
+   
     #region "skill_demo"
     [Header("skill_demo")]
     public UI_Caowei uI_1;

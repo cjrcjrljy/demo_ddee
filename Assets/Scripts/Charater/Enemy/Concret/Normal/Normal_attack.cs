@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Normal_attack : EnemyState
+public class Normal_attack :AllLessState
 {
-    public Enemy_Demo demo;
-    public Normal_attack(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Enemy_Demo demo) : base(stateMahine, enemy, animatorName)
+    public Normal_attack(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Enemy_Demo demo) : base(stateMahine, enemy, animatorName, demo)
     {
-        this.demo = demo;
     }
 
     public override void Enter()
@@ -21,6 +19,7 @@ public class Normal_attack : EnemyState
     public override void Exit()
     {
         base.Exit();
+        demo.Setvelocity(0, 0);
    }
 
     public override void Update()

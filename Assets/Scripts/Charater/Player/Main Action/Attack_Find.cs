@@ -40,14 +40,14 @@ public class Attack_Find : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
          
-            demo.StateMachine.CurrrentState.TriggerCalled = true;
+           demo.IsHitted = true;
             if (player.Hleath.currentHleath<player.Hleath.maxHleath)
                 player.AttackState.recc(10);
             demo.Hleath.Damage(damage);
-
+          
         }
     }
 
-
+   
 
 }

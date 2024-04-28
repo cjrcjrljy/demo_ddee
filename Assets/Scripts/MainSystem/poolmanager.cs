@@ -5,6 +5,7 @@ using UnityEngine;
 public class poolmanager : MonoBehaviour
 {
     [SerializeField]public pool[] StandPools;
+    [SerializeField] public pool[] enemyAttacks;
 
 
     public static Dictionary<GameObject, pool> dic;
@@ -12,7 +13,7 @@ public class poolmanager : MonoBehaviour
     {
       dic = new Dictionary<GameObject, pool>();
         initialize(StandPools);
-     
+        initialize(enemyAttacks);
     }
     public void OnDestroy()
     {

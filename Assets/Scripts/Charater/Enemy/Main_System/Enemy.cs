@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 每个都会有fouc，需要每次new一个
+/// </summary>
 public class Enemy : Enity
 {
     [Header("enemy")]
