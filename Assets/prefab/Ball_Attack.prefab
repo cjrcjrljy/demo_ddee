@@ -164,6 +164,8 @@ MonoBehaviour:
   dir_x: 0
   dir_y: 0
   target: {fileID: 0}
+  Lifetime: 2
+  nowtime: 0
   change: 0
 --- !u!50 &1043881261727711930
 Rigidbody2D:

@@ -10,6 +10,8 @@ public class BallAttack : MonoBehaviour
     public float dir_x;
     public float dir_y;
     public GameObject target;
+    public float Lifetime;
+    public float nowtime;
     public bool change = false;
     private void Awake()
     {
@@ -23,17 +25,22 @@ public class BallAttack : MonoBehaviour
        
         GetDir();
         change = false;
-        Debug.Log(dir_x + " " + dir_y);
+       
        
         SetVelociry(Vel_x * dir_x, Vel_y * dir_y);
 
     }
     private void Update()
     {
+        nowtime += Time.deltaTime;
+        if(nowtime > Lifetime)
+        {
+            gameObject.SetActive(false);
+        }
         if (!change)
         {
             GetDir();
-            Debug.Log(dir_x + " " + dir_y);
+     
 
             SetVelociry(Vel_x * dir_x, Vel_y * dir_y);
             change = true;
@@ -56,5 +63,9 @@ public class BallAttack : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
       gameObject.SetActive(false);
+    }
+    private void OnDisable()
+    {
+        nowtime = 0;
     }
 }

@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 8924316172064673031}
   - component: {fileID: 4619252086140711840}
   - component: {fileID: 6726705558516349385}
+  - component: {fileID: 3466388576852554034}
   m_Layer: 0
   m_Name: ani
   m_TagString: Untagged
@@ -579,6 +580,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3466388576852554034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342379515299857651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fabac21b4db9ad4896b8e750bb62f1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  demo: {fileID: 0}
+  animator: {fileID: 0}
+  remoteEnemy: {fileID: 0}
 --- !u!1 &8535037210226219462
 GameObject:
   m_ObjectHideFlags: 0
