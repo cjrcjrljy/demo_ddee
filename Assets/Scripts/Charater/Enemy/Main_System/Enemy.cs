@@ -14,7 +14,7 @@ public class Enemy : Enity
     public Fouc fouc;
     public FindPlayer findPlayer;
     public float Movespeed;
-    public bool IsFindPlayer => findPlayer.Findpp;
+    public bool IsFindPlayer => findPlayer.Findp_ground;
     [Header("Attack")]
     public EnemyAttack[] enemyAttacks;
     public override void Awake()
