@@ -19,7 +19,7 @@ public class FindPlayer : MonoBehaviour
     {
         get
         {
-            return Physics2D.OverlapCircleAll(transform.position, Radius, Player) != null; ;
+            return Physics2D.OverlapCircleAll(transform.position, Radius,Player) .Length>0 ;
         }
     }
     private void Awake()

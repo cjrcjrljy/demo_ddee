@@ -23,7 +23,7 @@ public class False_idle : EnemyState
     public override void Update()
     {
        
-        if (enemyBase.IsFindPlayer)
+        if (enemyBase.IsFindPlayer_grou)
         {
             enemyBase.StateMachine.ChangeState(enemyBase.fouc);
 

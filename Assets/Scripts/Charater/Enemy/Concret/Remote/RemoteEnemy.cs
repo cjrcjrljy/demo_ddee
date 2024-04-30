@@ -32,6 +32,7 @@ public class RemoteEnemy : Enemy
     }
     public override void Update()
     {
+        Debug.Log(IsFindPlayer_air);
      if(Input.GetKeyDown(KeyCode.P))
         {
             StateMachine.ChangeState(hootState);

@@ -22,8 +22,10 @@ public class SearchingForState : EnemyState
 
     public override void Update()
     {
-        enemyBase.Setvelocity(enemyBase.Movespeed* enemyBase.Facingdir, enemyBase.rb.velocity.y);
-        if (enemyBase.IsFindPlayer)
+        base.Update();
+
+        enemyBase.Setvelocity(enemyBase.Movespeed * enemyBase.Facingdir, enemyBase.rb.velocity.y);
+        if (enemyBase.IsFindPlayer_grou||enemyBase.IsFindPlayer_air)
         {
             enemyBase.StateMachine.ChangeState(enemyBase.fouc);
 

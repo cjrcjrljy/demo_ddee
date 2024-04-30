@@ -25,6 +25,7 @@ public class ShootState : EnemyState
     public override void Update()
     {
         base.Update();
+        enemyBase.FacingPlayer();
         if (TriggerCalled)
             stateMahine.ChangeState(remote.searchingForState);
     }
