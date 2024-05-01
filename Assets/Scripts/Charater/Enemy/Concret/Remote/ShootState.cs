@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootState : EnemyState
+public class ShootState :AllLessState
 {
     public RemoteEnemy remote;
-    public ShootState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, RemoteEnemy remote) : base(stateMahine, enemy, animatorName)
+    public ShootState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, NormalEnemy normalEnemy, RemoteEnemy remote) : base(stateMahine, enemy, animatorName, normalEnemy)
     {
         this.remote = remote;
     }

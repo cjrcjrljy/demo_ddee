@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkDis: 10
   enemy: {fileID: 0}
+  Radius: 0
   Player:
     serializedVersion: 2
     m_Bits: 64

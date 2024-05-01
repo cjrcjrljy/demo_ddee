@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class AllLessState : EnemyState
 {
-    public Enemy_Demo demo;
-    public AllLessState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName
-        , Enemy_Demo demo) : base(stateMahine, enemy, animatorName)
+    public NormalEnemy NormalEnemy;
+    public AllLessState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, NormalEnemy normalEnemy) : base(stateMahine, enemy, animatorName)
     {
-        this.demo = demo;
+        NormalEnemy = normalEnemy;
     }
 
     public override void Enter()
@@ -26,7 +25,7 @@ public class AllLessState : EnemyState
     {
         if (enemyBase.IsHitted)
         {
-            stateMahine.ChangeState(demo.hittedstate);
+            stateMahine.ChangeState(NormalEnemy.hittedstate);
         }
         base.Update();
     }

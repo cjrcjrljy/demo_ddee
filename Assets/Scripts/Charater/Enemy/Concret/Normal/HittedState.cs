@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class HittedState : AllLessState
 {
-    public HittedState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Enemy_Demo demo) : base(stateMahine, enemy, animatorName, demo)
+    public HittedState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, NormalEnemy normalEnemy) : base(stateMahine, enemy, animatorName, normalEnemy)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
-        demo.Setvelocity(demo.HittedDis * (-1) * demo.Facingdir, demo.rb.velocity.y);
+        NormalEnemy.Setvelocity(NormalEnemy.HittedDis * (-1) * NormalEnemy.Facingdir, NormalEnemy.rb.velocity.y);
     }
 
     public override void Exit()
     {
         base.Exit();
-        demo.IsHitted = false;
+        NormalEnemy.IsHitted = false;
     }
 
     public override void Update()
     {
         if(TriggerCalled)
         {
-            stateMahine.ChangeState(demo.searchingstate);
+            stateMahine.ChangeState(NormalEnemy.searchingForState);
         }
         base.Update();
     }

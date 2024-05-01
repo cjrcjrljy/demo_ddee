@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Normal_attack :AllLessState
 {
-    public Normal_attack(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Enemy_Demo demo) : base(stateMahine, enemy, animatorName, demo)
+    public Normal_attack(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, NormalEnemy normalEnemy) : base(stateMahine, enemy, animatorName, normalEnemy)
     {
     }
 
@@ -19,7 +19,7 @@ public class Normal_attack :AllLessState
     public override void Exit()
     {
         base.Exit();
-        demo.Setvelocity(0, 0);
+        NormalEnemy.Setvelocity(0, 0);
    }
 
     public override void Update()
@@ -27,7 +27,7 @@ public class Normal_attack :AllLessState
         base.Update();
         if (TriggerCalled)
         {
-            demo.StateMachine.ChangeState(demo.searchingstate);
+            NormalEnemy.StateMachine.ChangeState(NormalEnemy.searchingForState);
         }
         enemyBase.FacingPlayer();
     }
