@@ -60,8 +60,9 @@ public class BallAttack : MonoBehaviour
         if(Mathf.Abs(dir_y)<.2f)
             dir_y = 0f;
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+     
       gameObject.SetActive(false);
     }
     private void OnDisable()

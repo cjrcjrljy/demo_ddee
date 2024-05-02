@@ -50,6 +50,7 @@ public class Player : Enity
     public Text text_C;
     public bool change_Skill = false;
     public bool change_BIG = false;
+    public bool Attack_Change = false;
     public SkillStateMachine skillStateMachine;
     #endregion
     #region"State"

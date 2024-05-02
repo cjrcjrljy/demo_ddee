@@ -21,7 +21,7 @@ public class Skill_C : SkillState
     public override void UPdate()
     {
         base.UPdate();
-        if (player.change_BIG && player.input.Switch&&ChangeTime<0)
+        if (player.change_BIG &&player.Attack_Change && player.input.Switch&&ChangeTime<0)
         {
             player._A.currrec = 0;
             player.text_A.text = "FFF";

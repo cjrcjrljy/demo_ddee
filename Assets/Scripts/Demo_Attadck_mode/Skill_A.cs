@@ -36,7 +36,7 @@ public class Skill_A : SkillState
     {
       
         text.text = outp[player.AttackState.ComboCounter];
-        if (player.change_BIG && player.input.Switch&&ChangeTime<0)
+        if (player.change_BIG &&player.Attack_Change &&player.input.Switch&&ChangeTime<0)
             stateMachine.ChangeState(player._B);
         if (player.input.Realse&&ChangeTime<0)
         {

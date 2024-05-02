@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkDis: 10
   enemy: {fileID: 0}
+  Radius: 0
   Player:
     serializedVersion: 2
     m_Bits: 64
@@ -246,6 +247,56 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4013190052737482343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5709329876431353369}
+  - component: {fileID: 5477554482144153190}
+  m_Layer: 7
+  m_Name: check_gro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5709329876431353369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013190052737482343}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.04, y: -1.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9151028185652058848}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5477554482144153190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013190052737482343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6316fe655249b0c4ebd688aee549c528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectorRadus: 0.1
+  collider2Ds:
+  - {fileID: 0}
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &6782776095701308853
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +367,7 @@ Transform:
   - {fileID: 2366993111615849161}
   - {fileID: 6751037174457286527}
   - {fileID: 1192046822518122176}
+  - {fileID: 5709329876431353369}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2442801828977966601
@@ -349,8 +401,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   checkwalldis: 1
-  bbacktime: 2
   HittedDis: 13
+  bbacktime: 2
 --- !u!50 &2435624382428838523
 Rigidbody2D:
   serializedVersion: 4

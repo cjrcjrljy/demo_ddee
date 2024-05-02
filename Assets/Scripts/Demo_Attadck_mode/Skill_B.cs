@@ -21,7 +21,7 @@ public class Skill_B : SkillState
     }
     public override void UPdate()
     {
-        if (player.change_BIG && player.input.Switch && ChangeTime<0)
+        if (player.change_BIG &&player.Attack_Change &&player.input.Switch && ChangeTime<0)
             stateMachine.ChangeState(player._C);
         if (Input.GetKeyDown(KeyCode.H))
         {

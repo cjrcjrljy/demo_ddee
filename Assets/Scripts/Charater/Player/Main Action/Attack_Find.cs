@@ -12,6 +12,8 @@ public class Attack_Find : MonoBehaviour
 
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
+            demo.IsHitted = true;
+            player.Attack_Change = true;
             if (player.Hleath.currentHleath < player.Hleath.maxHleath)
                 player.AttackState.recc(10);
             demo.Hleath.Damage(damage);

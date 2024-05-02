@@ -13,6 +13,7 @@ public class AnimatorController : MonoBehaviour
     {
          player.stateMachine.CurrentState.TriggerCalled = true;
         player.change_BIG=false; 
+        player.Attack_Change=false;
     }
     public void CanChange()
     {
