@@ -19,6 +19,10 @@ public class HleathSystem : MonoBehaviour
         CanbeAttacked = true;
         currentHleath = maxHleath;
     }
+    /// <summary>
+    /// 如果attack bool为false则会直接返回
+    /// </summary>
+    /// <param name="damage"></param>
     public void Damage(float damage)
     {
         if(!CanbeAttacked)
