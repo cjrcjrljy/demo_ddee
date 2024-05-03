@@ -48,7 +48,11 @@ public class Enity : MonoBehaviour
         Facingdir *= -1;
         rb.transform.localScale = new Vector3(Facingdir, rb.transform.localScale.y, rb.transform.localScale.z);
     }
-
+    /// <summary>
+    /// º«µ√≥À…œmovespeed
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
     public void Setvelocity(float x, float y)
     {
         rb.velocity = new Vector2(x, y);

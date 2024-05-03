@@ -26,7 +26,9 @@ public class Player : Enity
     public JumpState jumpState { get; private set; }
     public Jump_fall jump_Fall { get; private set; }
     public Jump_land jump_Land { get; private set; }
+    public HideState hideState { get; private set; }
     [Header("for shakerr")]
+
     public float shakeTime;
     public int pauseTime;
     public float strengh;
@@ -78,8 +80,7 @@ public class Player : Enity
         jumpState = new JumpState(this, stateMachine, "Jump", input);
         jump_Fall = new Jump_fall(this, stateMachine, "Jump_fall", input);
         jump_Land = new Jump_land(this, stateMachine, "Jump_land", input);
-
-
+        hideState = new HideState(this, stateMachine, "Hide", input);
 
         _A = new Skill_A("A", skillStateMachine, this);
         _B=new Skill_B("B", skillStateMachine, this);
@@ -94,11 +95,8 @@ public class Player : Enity
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-           
-            NNTR();
-        }
+        if (input.Hide)
+            stateMachine.ChangeState(hideState);
         stateMachine.CurrentState.Update();
         skillStateMachine.State.UPdate();
     }

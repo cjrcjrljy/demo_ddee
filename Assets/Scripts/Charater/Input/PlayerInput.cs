@@ -14,6 +14,7 @@ public class PlayerInput : MonoBehaviour
     public bool Realse => system.Gameplay.Realse_skill.WasPerformedThisFrame();
     public bool Attack => system.Gameplay.Attack.WasPerformedThisFrame();
     public bool Jump=>system.Gameplay.Jump.WasPerformedThisFrame();
+    public bool  Hide=>system.Gameplay.hiding.WasPerformedThisFrame();
     private void Awake()
     {
         system=new PlayerInputSystem();
