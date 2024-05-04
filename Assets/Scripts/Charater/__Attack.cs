@@ -9,7 +9,7 @@ public class __Attack : MonoBehaviour
     {
         if(collision. gameObject.TryGetComponent<HleathSystem>(out HleathSystem hleathSystem))
         {
-            Debug.Log(hleathSystem.CanbeAttacked);
+        
             hleathSystem.Damage(damage);
         }
     }

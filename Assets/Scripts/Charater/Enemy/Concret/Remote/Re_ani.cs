@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.tvOS;
 
 public class Re_ani : Ene_ani
 {
@@ -13,5 +14,10 @@ public class Re_ani : Ene_ani
     public void AniOut()
     {
         remoteEnemy.StateMachine.CurrrentState.TriggerCalled = true;
+    }
+    public void ReleaseShoot()
+    {
+
+        poolmanager.Release(remoteEnemy.shoot, remoteEnemy.standard.transform.position);
     }
 }

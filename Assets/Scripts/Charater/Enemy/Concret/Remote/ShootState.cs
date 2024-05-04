@@ -14,7 +14,7 @@ public class ShootState :AllLessState
     {
         base.Enter();
         enemyBase.Setvelocity(0, 0);
-        poolmanager.Release(remote.shoot,remote.standard.transform.position);
+       // poolmanager.Release(remote.shoot,remote.standard.transform.position);
     }
 
     public override void Exit()
@@ -26,6 +26,8 @@ public class ShootState :AllLessState
     {
         base.Update();
         enemyBase.FacingPlayer();
+        if (remote.IsHitted)
+            stateMahine.ChangeState(remote.hittedstate);
         if (TriggerCalled)
             stateMahine.ChangeState(remote.searchingForState);
     }

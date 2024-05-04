@@ -1493,7 +1493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &577679011
 Rigidbody2D:
   serializedVersion: 4
@@ -2013,6 +2013,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915238670}
     m_Modifications:
+    - target: {fileID: 2442801828977966601, guid: 4cf0c979eadd6184588fe26775526f51, type: 3}
+      propertyPath: HittedDis
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171198183418538089, guid: 4cf0c979eadd6184588fe26775526f51, type: 3}
+      propertyPath: maxHleath
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7361415263675240710, guid: 4cf0c979eadd6184588fe26775526f51, type: 3}
       propertyPath: m_Name
       value: enemy
@@ -2952,7 +2960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616575f8f758a3745becd9af85ea5723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHleath: 100
+  maxHleath: 1000
   currentHleath: 0
   CanbeAttacked: 0
   CD_for_rec: 0
@@ -3468,6 +3476,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3714870544879763939, guid: aa312259f206693458e0cb3927dd800c, type: 3}
+      propertyPath: HittedDis
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8316090166176219192, guid: aa312259f206693458e0cb3927dd800c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.94

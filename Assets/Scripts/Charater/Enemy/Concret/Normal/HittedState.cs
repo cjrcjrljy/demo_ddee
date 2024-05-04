@@ -22,6 +22,7 @@ public class HittedState : AllLessState
 
     public override void Update()
     {
+        Debug.Log("hitted");
         if(TriggerCalled)
         {
             stateMahine.ChangeState(NormalEnemy.searchingForState);

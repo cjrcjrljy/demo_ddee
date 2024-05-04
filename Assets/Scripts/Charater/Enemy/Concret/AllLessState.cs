@@ -23,7 +23,7 @@ public class AllLessState : EnemyState
 
     public override void Update()
     {
-        if (enemyBase.IsHitted)
+        if (NormalEnemy.IsHitted)
         {
             stateMahine.ChangeState(NormalEnemy.hittedstate);
         }

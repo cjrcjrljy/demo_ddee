@@ -23,6 +23,8 @@ public class SearchingForState :AllLessState
     public override void Update()
     {
         base.Update();
+        if (NormalEnemy.IsHitted)
+            stateMahine.ChangeState(NormalEnemy.hittedstate);
         if (!enemyBase.IsGrounded)
             enemyBase.Filp();
         enemyBase.Setvelocity(enemyBase.Movespeed * enemyBase.Facingdir, enemyBase.rb.velocity.y);
