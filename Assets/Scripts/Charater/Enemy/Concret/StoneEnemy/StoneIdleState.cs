@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirState : Fouc
+public class StoneIdleState : EnemyState
 {
-    public AirState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName) : base(stateMahine, enemy, animatorName)
+    public StoneEnemy stoneEnemy;
+    public StoneIdleState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
     {
+        this.stoneEnemy = stoneEnemy;
     }
-    public float jumphei;
+
     public override void Enter()
     {
-     //   enemyBase.Setvelocity(movespeed / 1.2f * enemyBase.Facingdir, jumphei);
         base.Enter();
     }
 

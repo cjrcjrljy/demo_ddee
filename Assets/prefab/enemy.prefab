@@ -401,7 +401,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   checkwalldis: 1
-  HittedDis: 13
+  HittedDis: 7
   bbacktime: 2
 --- !u!50 &2435624382428838523
 Rigidbody2D:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616575f8f758a3745becd9af85ea5723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHleath: 100
+  maxHleath: 1000
   currentHleath: 0
   CanbeAttacked: 0
   CD_for_rec: 0

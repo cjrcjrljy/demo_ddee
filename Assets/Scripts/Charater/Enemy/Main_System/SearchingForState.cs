@@ -28,7 +28,7 @@ public class SearchingForState :AllLessState
         if (!enemyBase.IsGrounded)
             enemyBase.Filp();
         enemyBase.Setvelocity(enemyBase.Movespeed * enemyBase.Facingdir, enemyBase.rb.velocity.y);
-        if (enemyBase.IsFindPlayer_grou||enemyBase.IsFindPlayer_air)
+        if (NormalEnemy.IsFindPlayer_grou|| NormalEnemy.IsFindPlayer_air)
         {
             enemyBase.StateMachine.ChangeState(enemyBase.fouc);
 

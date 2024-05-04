@@ -11,7 +11,7 @@ public class EnemyState
     public float StateTimer;
     public bool Focus;
 
-    public float movespeed;
+  
 
     public EnemyState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName)
     {

@@ -7,8 +7,8 @@ public class Enity : MonoBehaviour
 {
     [Header("Must")]
     #region "check"
-    public GroundDectector Dectector;
-    public bool IsGrounded => Dectector.Isgound;
+    public GroundDectector GroundDec;
+    public bool IsGrounded => GroundDec.Isgound;
     public bool IsFailing => rb.velocity.y < 0f && !IsGrounded;
     public bool IsHitted;
     public GameObject detectorForSomething;
@@ -19,11 +19,11 @@ public class Enity : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rb;
     public HleathSystem Hleath;
-    public bool FacingRight;
+    public bool FacingRight=true;
     public int Facingdir = 1;
     public virtual void Awake()
     {
-        Dectector = GetComponentInChildren<GroundDectector>();
+        GroundDec = GetComponentInChildren<GroundDectector>();
         Hleath = GetComponent<HleathSystem>();
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();

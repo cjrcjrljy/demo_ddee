@@ -270,7 +270,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   checkwalldis: 3
-  HittedDis: 5
+  HittedDis: 0
   shoot: {fileID: 1021721274589410197, guid: f60526e54f7c58248a76bef6e1b2db28, type: 3}
   standard: {fileID: 7091961680035882460}
 --- !u!1 &5068327484735456795

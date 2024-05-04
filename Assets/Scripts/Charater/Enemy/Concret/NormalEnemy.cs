@@ -10,6 +10,9 @@ public class NormalEnemy :Enemy
     public float HittedDis;
     public HittedState hittedstate;
     public SearchingForState searchingForState;
+    public FindPlayer findPlayer;
+    public bool IsFindPlayer_grou => findPlayer.Findp_ground;
+    public bool IsFindPlayer_air => findPlayer.FindP_Air;
     public bool iswall
     {
         get
@@ -19,7 +22,9 @@ public class NormalEnemy :Enemy
     }
     public override void Awake()
     {
+        findPlayer = GetComponentInChildren<FindPlayer>();
         base.Awake();
+
         hittedstate = new HittedState(StateMachine, this, "Hitted", this);
     }
     public override void Update()
