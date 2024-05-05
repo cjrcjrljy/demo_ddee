@@ -14,9 +14,9 @@ public class normal_ani :Ene_ani
     {
         enemyBase.Setvelocity(enemyBase.Movespeed * 3.2f * enemyBase.Facingdir, enemyBase.rb.velocity.y);
     }
-    public void TriggerOut()
+    public override void TriggerOut()
     {
-        enemyBase.StateMachine.CurrrentState.TriggerCalled = true;
+        base.TriggerOut();
     }
 
 }

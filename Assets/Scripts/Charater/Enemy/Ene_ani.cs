@@ -11,4 +11,8 @@ public class Ene_ani : MonoBehaviour
         animator=GetComponent<Animator>();
         demo = GetComponentInParent<Enemy>();
     }
+    public virtual void TriggerOut()
+    {
+        demo.StateMachine.CurrrentState.TriggerCalled = true;
+    }
 }

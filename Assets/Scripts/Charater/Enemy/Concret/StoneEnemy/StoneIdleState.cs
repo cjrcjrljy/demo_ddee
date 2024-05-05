@@ -23,5 +23,7 @@ public class StoneIdleState : EnemyState
     public override void Update()
     {
         base.Update();
+        if (TriggerCalled)
+            stateMahine.ChangeState(stoneEnemy.stoneTowardState);
     }
 }

@@ -24,6 +24,8 @@ public class StoneTowardState : EnemyState
     {
         stoneEnemy.FacingPlayer();
         stoneEnemy.Setvelocity(stoneEnemy.Movespeed * stoneEnemy.Facingdir, stoneEnemy.rb.velocity.y);
+        if (stoneEnemy.isready.isReadyToAttack)
+            stateMahine.ChangeState(stoneEnemy.stoneIdle);
         base.Update();
     }
 }
