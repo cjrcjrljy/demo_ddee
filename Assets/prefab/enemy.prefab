@@ -535,6 +535,7 @@ MonoBehaviour:
   sr: {fileID: 0}
   HitMat: {fileID: 2100000, guid: 9a94574718081564399c5225069a4104, type: 2}
   originalMat: {fileID: 0}
+  ReadyAttack: {fileID: 2100000, guid: 0917aa104a1a8f44c910dddd5b41332b, type: 2}
 --- !u!1 &7479001730089026819
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5712a9723bc8846a30dc7dc5f9d927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fx: {fileID: 4314225013904863303, guid: b8e2e6e30875e024fbf39afea19198f5, type: 3}
   damage: 20
 --- !u!1 &7736413663616182161
 GameObject:

@@ -39,7 +39,7 @@ public class NormalEnemy :Enemy
     }
     public override void Update()
     {
-        Debug.Log(IsneedFilp_gro);
+     
         if (iswall)
         {
             Filp();

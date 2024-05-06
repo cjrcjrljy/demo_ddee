@@ -1936,14 +1936,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 915238670}
     m_Modifications:
-    - target: {fileID: 4458592217362383645, guid: 4cf0c979eadd6184588fe26775526f51, type: 3}
-      propertyPath: HitMat
-      value: 
-      objectReference: {fileID: 2100000, guid: 9a94574718081564399c5225069a4104, type: 2}
-    - target: {fileID: 4458592217362383645, guid: 4cf0c979eadd6184588fe26775526f51, type: 3}
-      propertyPath: ReadyAttack
-      value: 
-      objectReference: {fileID: 2100000, guid: 0917aa104a1a8f44c910dddd5b41332b, type: 2}
     - target: {fileID: 7361415263675240710, guid: 4cf0c979eadd6184588fe26775526f51, type: 3}
       propertyPath: m_Name
       value: enemy
@@ -2566,6 +2558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5712a9723bc8846a30dc7dc5f9d927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fx: {fileID: 4314225013904863303, guid: b8e2e6e30875e024fbf39afea19198f5, type: 3}
   damage: 20
 --- !u!1 &1332770734
 GameObject:
@@ -4056,18 +4049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: remoteEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 286349934045662630, guid: aa312259f206693458e0cb3927dd800c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1155957918957781241, guid: aa312259f206693458e0cb3927dd800c, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 4875752963401791024, guid: aa312259f206693458e0cb3927dd800c, type: 3}
-      propertyPath: ReadyAttack
-      value: 
-      objectReference: {fileID: 2100000, guid: 0917aa104a1a8f44c910dddd5b41332b, type: 2}
     - target: {fileID: 8316090166176219192, guid: aa312259f206693458e0cb3927dd800c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.07
