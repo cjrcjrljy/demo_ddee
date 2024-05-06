@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb197bdad2d962468fef0089b1200c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dectector: {fileID: 0}
+  GroundDec: {fileID: 0}
   IsHitted: 0
   detectorForSomething: {fileID: 0}
   animator: {fileID: 0}
@@ -259,10 +259,12 @@ MonoBehaviour:
   Hleath: {fileID: 0}
   FacingRight: 0
   Facingdir: 1
+  shakeTime: 0
+  pauseTime: 0
+  strengh: 0
   Target: {fileID: 0}
   player: {fileID: 0}
   trigger: 0
-  findPlayer: {fileID: 0}
   Movespeed: 5
   enemyAttacks: []
   Checkwall: {fileID: 5068327484735456795}
@@ -271,6 +273,7 @@ MonoBehaviour:
     m_Bits: 8
   checkwalldis: 3
   HittedDis: 0
+  findPlayer: {fileID: 0}
   shoot: {fileID: 1021721274589410197, guid: f60526e54f7c58248a76bef6e1b2db28, type: 3}
   standard: {fileID: 7091961680035882460}
 --- !u!1 &5068327484735456795
@@ -622,7 +625,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1256554353, guid: 6801911b9ab28c442bc3e2ed545e2bde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 64fc4eae63a175c4a89f79f6b73c517e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

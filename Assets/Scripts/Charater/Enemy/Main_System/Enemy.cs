@@ -6,6 +6,10 @@ using UnityEngine;
 /// </summary>
 public class Enemy : Enity
 {
+    public float shakeTime;
+    public int pauseTime;
+    public float strengh;
+
     [Header("enemy")]
     public GameObject Target;
     public Player player;

@@ -57,7 +57,9 @@ public class BallAttack : MonoBehaviour
         dir_y=target.transform.position.y-transform.position.y;
         Vector2 mid=new Vector2(dir_x,dir_y).normalized;
         dir_x = mid.x; dir_y=mid.y;
-        if(Mathf.Abs(dir_y)<.2f)
+        float angle = Mathf.Atan(mid.y / mid.x)*Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        if (Mathf.Abs(dir_y)<.2f)
             dir_y = 0f;
     }
     private void OnTriggerEnter2D(Collider2D collision)
