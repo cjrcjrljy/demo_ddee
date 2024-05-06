@@ -38,7 +38,8 @@ public class FindPlayer : MonoBehaviour
         Gizmos.DrawLine(transform.position,new Vector3(transform.position.x+ checkDis*enemy.Facingdir, 
             transform.position.y));
         Gizmos.color = Color.blue;
-        Gizmos.DrawSphere(transform.position,Radius);
+        //Gizmos.DrawSphere(transform.position,Radius);
+        Gizmos.DrawWireSphere(transform.position,Radius);
     }
  
 }

@@ -6,14 +6,16 @@ using UnityEngine;
 public class Attack_Find : MonoBehaviour
 {
     public float damage = 10;
+    public GameObject Hitvfx;
     public Player player;
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
-            
+           // var point = collision.GetContact
             demo.IsHitted = true;
+            poolmanager.Release(Hitvfx, transform.position);
             player.Attack_Change = true;
             if (player.Hleath.currentHleath < player.Hleath.maxHleath)
                 player.AttackState.recc(10);

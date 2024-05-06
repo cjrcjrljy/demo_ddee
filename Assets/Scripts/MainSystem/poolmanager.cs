@@ -6,7 +6,7 @@ public class poolmanager : MonoBehaviour
 {
     [SerializeField]public pool[] StandPools;
     [SerializeField] public pool[] enemyAttacks;
-
+    [SerializeField] public pool[] VfxPools; 
 
     public static Dictionary<GameObject, pool> dic;
     public void Awake()
@@ -14,6 +14,7 @@ public class poolmanager : MonoBehaviour
       dic = new Dictionary<GameObject, pool>();
         initialize(StandPools);
         initialize(enemyAttacks);
+        initialize(VfxPools);
     }
     public void OnDestroy()
     {
