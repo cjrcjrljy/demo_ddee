@@ -15,19 +15,22 @@ public class Normal_attack :AllLessState
     {
     
         base.Enter();
-      
+        NormalEnemy.Hleath.Fx.sr.material = NormalEnemy.Hleath.Fx.ReadyAttack;
     }
 
     public override void Exit()
     {
-        base.Exit();
+        NormalEnemy.Hleath.Fx.sr.material = NormalEnemy.Hleath.Fx.originalMat;
         NormalEnemy.Setvelocity(0, 0);
+        base.Exit();
    }
 
     public override void Update()
     {
         if (NormalEnemy.IsHitted)
             stateMahine.ChangeState(NormalEnemy.hittedstate);
+        if (TriggerCalled)
+            stateMahine.ChangeState(NormalEnemy.searchingForState);
         base.Update();
         enemyBase.FacingPlayer();
     }

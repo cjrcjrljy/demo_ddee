@@ -14,11 +14,13 @@ public class ShootState :AllLessState
     {
         base.Enter();
         enemyBase.Setvelocity(0, 0);
-       // poolmanager.Release(remote.shoot,remote.standard.transform.position);
+        NormalEnemy.Hleath.Fx.sr.material = NormalEnemy.Hleath.Fx.ReadyAttack;
+        // poolmanager.Release(remote.shoot,remote.standard.transform.position);
     }
 
     public override void Exit()
     {
+        NormalEnemy.Hleath.Fx.sr.material = NormalEnemy.Hleath.Fx.originalMat;
         base.Exit();
     }
 

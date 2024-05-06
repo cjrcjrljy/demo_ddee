@@ -1,3 +1,4 @@
+using Pixeye.Unity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 public class Player : Enity
 {
-
+    [Foldout("collider",true)]
     public PhysicsMaterial2D Zero;
     public PhysicsMaterial2D ori;
     public Collider2D Collider;
@@ -18,6 +19,7 @@ public class Player : Enity
     [Header("Forcannot")]
     public PhysicsMaterial2D Zer0;
     int mid;
+    [Foldout("State",true)]
     public PlayerStateMachine stateMachine;
     public IdleState IdleState { get; private set; }
     public MoveState moveState { get; private set; }
@@ -29,16 +31,21 @@ public class Player : Enity
     public HideState hideState { get; private set; }
     [Header("for shakerr")]
 
+    [Foldout("Scene Shaker",true)]
     public float shakeTime;
     public int pauseTime;
     public float strengh;
+    [Space]
+
+    [Foldout("Something",true)]
     public Vector3 position;
     public PlayerInput input;
     public List<SaveFor> sa;
     public TostandManager TostandManager;
     [Header("referenceAttack")]
-   
+
     #region "skill_demo"
+    [Foldout("Skill_Demo",true)]
     [Header("skill_demo")]
     public UI_Caowei uI_1;
     public UI_Caowei uI_2;

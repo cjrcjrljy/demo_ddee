@@ -8,6 +8,7 @@ public class EntityFx : MonoBehaviour
     [Header("Flash FX")]
     public Material HitMat;
     public Material originalMat;
+    public Material ReadyAttack;
     private void Awake()
     {
         sr = GetComponentInChildren<SpriteRenderer>();

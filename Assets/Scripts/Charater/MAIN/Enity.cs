@@ -1,3 +1,4 @@
+using Pixeye.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,14 +14,14 @@ public class Enity : MonoBehaviour
     public bool IsHitted;
     public GameObject detectorForSomething;
     #endregion
-
-
-
     public Animator animator;
     public Rigidbody2D rb;
     public HleathSystem Hleath;
     public bool FacingRight=true;
     public int Facingdir = 1;
+
+
+
     public virtual void Awake()
     {
         GroundDec = GetComponentInChildren<GroundDectector>();
