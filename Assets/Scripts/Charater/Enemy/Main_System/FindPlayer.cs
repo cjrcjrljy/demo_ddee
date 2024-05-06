@@ -8,6 +8,9 @@ public class FindPlayer : MonoBehaviour
     public Enemy enemy;
     public float Radius;
     public LayerMask Player;
+    /// <summary>
+    ///地面敌人使用
+    /// </summary>
    public bool Findp_ground
     {
         get
@@ -15,6 +18,9 @@ public class FindPlayer : MonoBehaviour
             return Physics2D.Raycast(transform.position, Vector2.right, checkDis*enemy.Facingdir ,Player);
         }
     }
+    /// <summary>
+    /// 空中敌人使用
+    /// </summary>
     public bool FindP_Air
     {
         get

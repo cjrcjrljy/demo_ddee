@@ -25,7 +25,7 @@ public class SearchingForState :AllLessState
         base.Update();
         if (NormalEnemy.IsHitted)
             stateMahine.ChangeState(NormalEnemy.hittedstate);
-        if (!enemyBase.IsGrounded)
+        if (enemyBase.IsGrounded&&!NormalEnemy.IsneedFilp_gro)
             enemyBase.Filp();
         enemyBase.Setvelocity(enemyBase.Movespeed * enemyBase.Facingdir, enemyBase.rb.velocity.y);
         if (NormalEnemy.IsFindPlayer_grou|| NormalEnemy.IsFindPlayer_air)

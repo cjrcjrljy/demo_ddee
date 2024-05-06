@@ -13,6 +13,16 @@ public class NormalEnemy :Enemy
     public FindPlayer findPlayer;
     public bool IsFindPlayer_grou => findPlayer.Findp_ground;
     public bool IsFindPlayer_air => findPlayer.FindP_Air;
+    public float ground_dis;
+    public GameObject CheckGro;
+    public bool IsneedFilp_gro
+    {
+        get
+        {
+            return Physics2D.OverlapCircleAll(CheckGro.transform.position, ground_dis, Wall).Length > 0;
+
+        }
+    }
     public bool iswall
     {
         get
@@ -29,6 +39,7 @@ public class NormalEnemy :Enemy
     }
     public override void Update()
     {
+        Debug.Log(IsneedFilp_gro);
         if (iswall)
         {
             Filp();
