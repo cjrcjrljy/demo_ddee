@@ -13,7 +13,9 @@ public class Attack_Find : MonoBehaviour
 
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
-           // var point = collision.GetContact
+            // var point = collision.GetContact
+            AttackSense.Instance.HitPause(player.pauseTime);
+            AttackSense.Instance.Hitshake(player.shakeTime, player.strengh);
             demo.IsHitted = true;
             poolmanager.Release(Hitvfx, transform.position);
             player.Attack_Change = true;

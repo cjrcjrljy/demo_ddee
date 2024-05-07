@@ -22,8 +22,8 @@ public class AnimatorController : MonoBehaviour
     }
     public void attackfeel()
     {
-        AttackSense.Instance.HitPause(player.pauseTime);
-        AttackSense.Instance.Hitshake(player.shakeTime, player.strengh);
+        //AttackSense.Instance.HitPause(player.pauseTime);
+        //AttackSense.Instance.Hitshake(player.shakeTime, player.strengh);
     }
     public void ChangeState_idle()
     {
