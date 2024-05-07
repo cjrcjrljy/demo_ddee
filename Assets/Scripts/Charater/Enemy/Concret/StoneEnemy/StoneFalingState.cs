@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoneIdleState :Stone_firstStage
+public class StoneFalingState :Stone_firstStage
 {
-    public StoneIdleState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
+    public StoneFalingState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
     {
     }
 
@@ -21,6 +21,5 @@ public class StoneIdleState :Stone_firstStage
     public override void Update()
     {
         base.Update();
-      
     }
 }

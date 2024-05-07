@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoneIdleState :Stone_firstStage
+public class RemoteFalState : Stone_firstStage
 {
-    public StoneIdleState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
+    public RemoteFalState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
     {
     }
 
     public override void Enter()
     {
         base.Enter();
+        stoneEnemy.TakeLight();
     }
 
     public override void Exit()
@@ -21,6 +22,5 @@ public class StoneIdleState :Stone_firstStage
     public override void Update()
     {
         base.Update();
-      
     }
 }

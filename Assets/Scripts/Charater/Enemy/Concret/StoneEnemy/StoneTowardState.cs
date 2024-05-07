@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoneTowardState : EnemyState
+public class StoneTowardState : Stone_firstStage
 {
-    public StoneEnemy stoneEnemy;
-    public StoneTowardState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
+    public StoneTowardState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
     {
-        this.stoneEnemy = stoneEnemy;
     }
 
     public override void Enter()
@@ -23,7 +21,7 @@ public class StoneTowardState : EnemyState
     public override void Update()
     {
         stoneEnemy.FacingPlayer();
-        //stoneEnemy.Setvelocity(stoneEnemy.Movespeed * stoneEnemy.Facingdir, stoneEnemy.rb.velocity.y);
+        stoneEnemy.Setvelocity(stoneEnemy.Movespeed * stoneEnemy.Facingdir, stoneEnemy.rb.velocity.y);
         if (stoneEnemy.isready.isReadyToAttack)
             stateMahine.ChangeState(stoneEnemy.stoneIdle);
         base.Update();

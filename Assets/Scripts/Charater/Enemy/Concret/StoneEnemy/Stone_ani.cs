@@ -14,4 +14,5 @@ public class Stone_ani :Ene_ani
     {
         base.TriggerOut();
     }
+
 }
