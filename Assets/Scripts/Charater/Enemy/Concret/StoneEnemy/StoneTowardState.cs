@@ -23,7 +23,7 @@ public class StoneTowardState : EnemyState
     public override void Update()
     {
         stoneEnemy.FacingPlayer();
-        stoneEnemy.Setvelocity(stoneEnemy.Movespeed * stoneEnemy.Facingdir, stoneEnemy.rb.velocity.y);
+        //stoneEnemy.Setvelocity(stoneEnemy.Movespeed * stoneEnemy.Facingdir, stoneEnemy.rb.velocity.y);
         if (stoneEnemy.isready.isReadyToAttack)
             stateMahine.ChangeState(stoneEnemy.stoneIdle);
         base.Update();

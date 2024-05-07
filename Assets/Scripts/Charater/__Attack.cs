@@ -10,7 +10,7 @@ public class __Attack : MonoBehaviour
     {
         if(collision. gameObject.TryGetComponent<HleathSystem>(out HleathSystem hleathSystem))
         {
-            poolmanager.Release(Fx, transform.position);
+            poolmanager.Release(Fx, collision.transform.position);
             hleathSystem.Damage(damage);
         }
     }

@@ -7,6 +7,8 @@ public class StoneEnemy : Enemy
     public StoneIdleState stoneIdle;
     public StoneTowardState stoneTowardState;
     public IsreadyToattack isready;
+    public GameObject FallingLight;
+    public GameObject CheckGro;
     public override void Awake()
     {
         base.Awake();
@@ -21,5 +23,12 @@ public class StoneEnemy : Enemy
     public override void Update()
     {
         base.Update();
+        if(Input.GetKeyDown(KeyCode.X)) {
+            TakeLight();
+        }
+    }
+    public void TakeLight()
+    {
+        poolmanager.Release(FallingLight, CheckGro.transform.position);
     }
 }

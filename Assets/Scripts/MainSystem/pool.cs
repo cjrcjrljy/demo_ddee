@@ -47,25 +47,25 @@ public class pool
     public GameObject prepared(Vector3 vector)
     {
         GameObject prepare = Avil();
-        prepare.SetActive(true);
         prepare.transform.position = vector;
+        prepare.SetActive(true);
         return prepare;
     }
     public GameObject prepared(Vector3 vector,Quaternion quaternion)
     {
         GameObject prepare = Avil();
-        prepare.SetActive(true);
         prepare.transform.position = vector;
         prepare.transform.rotation = quaternion;
+        prepare.SetActive(true);
         return prepare;
     }
     public GameObject prepared(Vector3 vector,Quaternion quaternion,Vector3 localscale)
     {
         GameObject prepare = Avil();
-        prepare.SetActive(true);
         prepare.transform.position = vector;
         prepare.transform.rotation = quaternion;
         prepare.transform.localScale = localscale;
+        prepare.SetActive(true);
         return prepare;
     }
 }
