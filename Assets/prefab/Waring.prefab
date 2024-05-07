@@ -97,9 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19884864f1ee51748b4cb188b57ccdfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Maxmovtime: 2.5
+  Maxmovtime: 1
   MovingTime: 2.5
   player: {fileID: 0}
   MovingDir: 0
   Light: {fileID: 6785243199948313055, guid: 6f9978f16b61dc44da3419ae6d1622a5, type: 3}
   MovingSpeed: 15
+  IsMoving: 0

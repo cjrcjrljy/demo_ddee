@@ -11,16 +11,20 @@ public class WarningObj : MonoBehaviour
     Vector3 target;
     public GameObject Light;
     public float MovingSpeed;
+    public bool IsMoving;
     private void Awake()
     {
+        
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     private void OnEnable()
     {
         MovingTime = Maxmovtime;
+        IsMoving = true;
         StartCoroutine(nameof(KeepMoving));
     }
+  
     private void OnDisable()
     {
         StopCoroutine(nameof(KeepMoving));
@@ -46,21 +50,25 @@ public class WarningObj : MonoBehaviour
          target= GetDis();
         while (true)
         { 
-            if(Vector3.Distance(transform.position, target)>Mathf.Epsilon)
+            if(IsMoving)
             {
-                transform.position= Vector3.MoveTowards(transform.position, 
-                    target,MovingSpeed* Time.deltaTime);
-            }
-            else
-            {
-                target = GetDis();
-                Debug.Log("TURN");
+                if (Vector3.Distance(transform.position, target) > Mathf.Epsilon)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position,
+                        target, MovingSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    target = GetDis();
+                    if (Mathf.Abs(target.x - player.transform.position.x) < 0.05f)
+                       IsMoving = false;
+
+                }
+
             }
           MovingTime-=Time.deltaTime;
-            if(MovingTime < 0)
-            {
-               AppearDamge();
-            }
+        if(MovingTime < 0)
+                AppearDamge();
             yield return null;
         }
     }

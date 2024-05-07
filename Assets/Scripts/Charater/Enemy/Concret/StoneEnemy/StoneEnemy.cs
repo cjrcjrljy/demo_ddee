@@ -9,6 +9,7 @@ public class StoneEnemy : Enemy
     public IsreadyToattack isready;
     public GameObject FallingLight;
     public GameObject CheckGro;
+    public float ApearFlow;
     public override void Awake()
     {
         base.Awake();
@@ -23,12 +24,12 @@ public class StoneEnemy : Enemy
     public override void Update()
     {
         base.Update();
-        if(Input.GetKeyDown(KeyCode.X)) {
-            TakeLight();
-        }
+        
     }
     public void TakeLight()
     {
-        poolmanager.Release(FallingLight, CheckGro.transform.position);
+        float xx=Random.Range(player.transform.position.x-ApearFlow,player.transform.position.x+ApearFlow);
+        Vector3 appear = new Vector3(xx, CheckGro.transform.position.y);
+        poolmanager.Release(FallingLight, appear);
     }
 }
