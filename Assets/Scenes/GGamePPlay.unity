@@ -4268,10 +4268,12 @@ MonoBehaviour:
   trigger: 0
   Movespeed: 5
   enemyAttacks: []
-  isready: {fileID: 0}
   FallingLight: {fileID: 936391552203631233, guid: 15f94f19449cca84ca4c10c54d594ed6, type: 3}
   CheckGro: {fileID: 365065761}
+  isready: {fileID: 0}
   ApearFlow: 10
+  Fallingmuch: 3
+  gapTime: 0.3
 --- !u!1 &1493119704
 GameObject:
   m_ObjectHideFlags: 0

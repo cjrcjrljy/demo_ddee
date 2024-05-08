@@ -12,9 +12,13 @@ public class StoneEnemy : Enemy
     public RemoteFalState remoteFal;
     public Stone_firstStage stone_FirstStage;
     public float ApearFlow;
+    public int Fallingmuch;
+    public WaitForSeconds waitgap_fal;
+    public float gapTime;
     public override void Awake()
     {
         base.Awake();
+        waitgap_fal = new WaitForSeconds(gapTime);
         isready=GetComponentInChildren<IsreadyToattack>();
         stoneIdle = new StoneIdleState(StateMachine, this, "Attack", this);
         remoteFal = new RemoteFalState(StateMachine, this, "Falling", this);
@@ -23,7 +27,7 @@ public class StoneEnemy : Enemy
     }
     private void OnEnable()
     {
-        StateMachine.Initialize(stone_FirstStage);
+        StateMachine.Initialize(stoneIdle);
     }
     public override void Update()
     {

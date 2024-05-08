@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoneTowardState : Stone_firstStage
+public class StoneTowardState :EnemyState
 {
-    public StoneTowardState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
+    public StoneEnemy stoneEnemy;
+    public StoneTowardState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
     {
+        this.stoneEnemy = stoneEnemy;
     }
 
     public override void Enter()

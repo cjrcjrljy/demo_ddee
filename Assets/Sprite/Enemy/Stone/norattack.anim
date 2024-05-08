@@ -21,15 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 050246439199169479721c9fc5fb07e9, type: 3}
-    - time: 0.23333333
       value: {fileID: 21300000, guid: 7dc10e63b0f765942ac394c5e1b3d3a8, type: 3}
-    - time: 0.51666665
-      value: {fileID: 21300000, guid: f4dc17f4425fa2240969c7fadf0a859b, type: 3}
-    - time: 0.6333333
-      value: {fileID: 21300000, guid: f4dc17f4425fa2240969c7fadf0a859b, type: 3}
-    - time: 0.81666666
-      value: {fileID: 21300000, guid: f4dc17f4425fa2240969c7fadf0a859b, type: 3}
+    - time: 0.28333333
+      value: {fileID: 21300000, guid: 31b508a3411d266419b0a2e89f9aa844, type: 3}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: 649d8a200ddf63a4c9b798a90f86ef73, type: 3}
+    - time: 0.8666667
+      value: {fileID: 21300000, guid: 7d647d4009c739241837c09032831dc3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -52,17 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 050246439199169479721c9fc5fb07e9, type: 3}
     - {fileID: 21300000, guid: 7dc10e63b0f765942ac394c5e1b3d3a8, type: 3}
-    - {fileID: 21300000, guid: f4dc17f4425fa2240969c7fadf0a859b, type: 3}
-    - {fileID: 21300000, guid: f4dc17f4425fa2240969c7fadf0a859b, type: 3}
-    - {fileID: 21300000, guid: f4dc17f4425fa2240969c7fadf0a859b, type: 3}
+    - {fileID: 21300000, guid: 31b508a3411d266419b0a2e89f9aa844, type: 3}
+    - {fileID: 21300000, guid: 649d8a200ddf63a4c9b798a90f86ef73, type: 3}
+    - {fileID: 21300000, guid: 7d647d4009c739241837c09032831dc3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.4666667
+    m_StopTime: 2.1666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -89,7 +86,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.4666667
+  - time: 2.1666667
     functionName: TriggerOut
     data: 
     objectReferenceParameter: {fileID: 0}

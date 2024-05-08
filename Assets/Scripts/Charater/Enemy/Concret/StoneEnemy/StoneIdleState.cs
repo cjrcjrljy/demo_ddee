@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class StoneIdleState :Stone_firstStage
+public class StoneIdleState : EnemyState
 {
-    public StoneIdleState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
+    public StoneEnemy stoneEnemy;
+    public StoneIdleState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName,StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
     {
+        this.stoneEnemy = stoneEnemy;
     }
 
     public override void Enter()
@@ -21,6 +24,8 @@ public class StoneIdleState :Stone_firstStage
     public override void Update()
     {
         base.Update();
-      
+        if (TriggerCalled)
+            stateMahine.ChangeState(stoneEnemy.stone_FirstStage);
     }
 }
+

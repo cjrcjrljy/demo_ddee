@@ -18,6 +18,6 @@ public class Ene_ani : MonoBehaviour
     public virtual void AttackShake()
     {  AttackSense.Instance.HitPause(demo.pauseTime);
         AttackSense.Instance.Hitshake(demo.shakeTime,demo.strengh);
-      
+        Debug.Log("shake");
     }
 }

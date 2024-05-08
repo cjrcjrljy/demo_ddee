@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoneFalingState :Stone_firstStage
+public class StoneFalingState :EnemyState
 {
-    public StoneFalingState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName, stoneEnemy)
+    public StoneEnemy stoneEnemy;
+    public StoneFalingState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
     {
+        this.stoneEnemy = stoneEnemy;
     }
 
     public override void Enter()
@@ -21,5 +23,7 @@ public class StoneFalingState :Stone_firstStage
     public override void Update()
     {
         base.Update();
+        if (TriggerCalled)
+            stateMahine.ChangeState(stoneEnemy.stone_FirstStage);
     }
 }

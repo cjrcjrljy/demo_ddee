@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackSense : MonoBehaviour
 {
     public static AttackSense instance ;
-    public static AttackSense Instance 
+    public static AttackSense Instance  
     {
         get
         {
@@ -14,6 +14,7 @@ public class AttackSense : MonoBehaviour
             return instance;
         }
     }
+    public Camera camera1;
     public bool isshake;
     public void HitPause(int duration)
     {
