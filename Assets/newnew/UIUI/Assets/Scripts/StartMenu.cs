@@ -28,7 +28,7 @@ public class StartMenu : MonoBehaviour
     public void New()
     {
         Debug.Log("new");
-        SceneManager.LoadScene("GGamePPlay");
+        SceneManager.LoadScene("RealPlay");
     }
 
     //…Ë÷√

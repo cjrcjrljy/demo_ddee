@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GGamePPlay.unity
     guid: 91512b725ca892349a6d66cec4f4f280
+  - enabled: 1
+    path: Assets/newnew/This/Assets/Scenes/RealPlay.unity
+    guid: bb05cbd87e0bd7844ac63499278f05d8
   m_configObjects: {}
