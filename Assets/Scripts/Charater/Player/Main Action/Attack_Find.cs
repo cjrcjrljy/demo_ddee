@@ -14,6 +14,8 @@ public class Attack_Find : MonoBehaviour
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy demo))
         {
             // var point = collision.GetContact
+            player.HifMusic.SetActive(false);
+            player.HifMusic.SetActive(true);
             AttackSense.Instance.HitPause(player.pauseTime);
             AttackSense.Instance.Hitshake(player.shakeTime, player.strengh);
             demo.IsHitted = true;

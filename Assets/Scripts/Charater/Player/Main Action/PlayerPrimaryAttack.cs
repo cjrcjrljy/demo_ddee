@@ -14,6 +14,7 @@ public class PlayerPrimaryAttack : PlayerState
 
     public override void Enter()
     {
+        
         Gravity = player.rb.gravityScale;
         player.Setvelocity(player.rb.velocity.x, player.rb.velocity.y/1.2f);
         if (Time.time > LastTimeAttacked + comboWindow)
