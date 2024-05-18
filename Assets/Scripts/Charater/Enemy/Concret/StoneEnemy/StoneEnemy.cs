@@ -32,7 +32,11 @@ public class StoneEnemy : Enemy
     public override void Update()
     {
         base.Update();
-        
+        if (IsHitted)
+        {
+            Debug.Log("hit");
+            IsHitted = false;
+        }
     }
     /// <summary>
     /// ²úÉúÂäÀ×
