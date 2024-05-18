@@ -61,6 +61,7 @@ public class Player : Enity
     public bool change_BIG = false;
     public bool Attack_Change = false;
     public SkillStateMachine skillStateMachine;
+    [Foldout("music", true)]
     #endregion
     #region"State"
    

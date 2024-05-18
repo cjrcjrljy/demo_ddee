@@ -21,7 +21,7 @@ public class SkillState
     public virtual void Enter()
     {
         ChangeTime = duration;
-
+    
     }
     public virtual void UPdate()
     {
@@ -29,7 +29,7 @@ public class SkillState
     }
     public virtual void Exit() 
     {
-        player.change_Skill=false;
+        player.change_Skill=false; 
 
     }
     /// <summary>
