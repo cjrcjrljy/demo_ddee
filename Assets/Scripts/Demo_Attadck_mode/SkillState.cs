@@ -21,8 +21,7 @@ public class SkillState
     public virtual void Enter()
     {
         ChangeTime = duration;
-        player.Switch.SetActive(false);
-        player.Switch.SetActive(true);
+    
     }
     public virtual void UPdate()
     {

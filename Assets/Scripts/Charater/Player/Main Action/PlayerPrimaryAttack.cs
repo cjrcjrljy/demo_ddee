@@ -16,7 +16,7 @@ public class PlayerPrimaryAttack : PlayerState
     {
         
         Gravity = player.rb.gravityScale;
-        player.Setvelocity(player.rb.velocity.x, player.rb.velocity.y/1.2f);
+        player.Setvelocity(0, player.rb.velocity.y/1.2f);
         if (Time.time > LastTimeAttacked + comboWindow)
             ComboCounter = 0;
         player.change_Skill = true;
@@ -39,6 +39,7 @@ public class PlayerPrimaryAttack : PlayerState
 
     public override void Update()
     {
+        player.Setvelocity(0, player.rb.velocity.y);
         if (TriggerCalled)
             StateMachine.ChangeState(player.IdleState);
         base.Update();

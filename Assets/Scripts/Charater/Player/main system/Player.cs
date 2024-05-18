@@ -62,8 +62,6 @@ public class Player : Enity
     public bool Attack_Change = false;
     public SkillStateMachine skillStateMachine;
     [Foldout("music", true)]
-    public GameObject Switch;
-    public GameObject HifMusic;
     #endregion
     #region"State"
    
