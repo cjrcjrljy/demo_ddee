@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HleathSystem : MonoBehaviour
 {
+    public Enity enity;
     public float maxHleath;
     public float currentHleath;
     public bool CanbeAttacked;
@@ -11,6 +12,7 @@ public class HleathSystem : MonoBehaviour
     public EntityFx Fx;
     private void Awake()
     {
+        enity = GetComponent<Enity>();
         Fx = GetComponent<EntityFx>();
     }
     public void OnEnable()
@@ -29,6 +31,7 @@ public class HleathSystem : MonoBehaviour
         {
             return;
         }
+        enity.IsHitted = true;
         StartCoroutine(Fx.FlashFX());
         currentHleath-=damage;
         if (currentHleath <= 0)

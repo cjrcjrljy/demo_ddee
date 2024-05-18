@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
 
-public class PlayerState
+public class PlayerState:ScriptableObject
 {
     #region "Basic Func"
     public PlayerStateMachine StateMachine;
@@ -35,6 +35,8 @@ public class PlayerState
     public virtual void Update()
     {
         //Xinput = Input.GetAxis("Horizontal");
+        if (player.IsHitted)
+            StateMachine.ChangeState(player.hitstate);
         if (player.IsGrounded)
             if (player.input.Jump)
                 StateMachine.ChangeState(player.jumpState);

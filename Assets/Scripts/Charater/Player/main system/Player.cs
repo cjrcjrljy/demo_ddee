@@ -21,6 +21,7 @@ public class Player : Enity
     int mid;
     [Foldout("State",true)]
     public PlayerStateMachine stateMachine;
+    public Hitstate hitstate;
     public IdleState IdleState { get; private set; }
     public MoveState moveState { get; private set; }
     public PlayerPrimaryAttack AttackState { get; private set; }
@@ -89,7 +90,7 @@ public class Player : Enity
         jump_Fall = new Jump_fall(this, stateMachine, "Jump_fall", input);
         jump_Land = new Jump_land(this, stateMachine, "Jump_land", input);
         hideState = new HideState(this, stateMachine, "Hide", input);
-
+        hitstate = new Hitstate(this, stateMachine, "Hit", input);
         _A = new Skill_A("A", skillStateMachine, this);
         _B=new Skill_B("B", skillStateMachine, this);
         _C=new Skill_C("C", skillStateMachine, this);

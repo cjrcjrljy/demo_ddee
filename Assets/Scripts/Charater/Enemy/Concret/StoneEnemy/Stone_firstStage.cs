@@ -8,16 +8,18 @@ public class Stone_firstStage : EnemyState
     public bool CanEnterNorAttack;
     public bool CanEnterRemoteFal;
     public int ModeAttack;
-
+    public int ModeUp=0;
     public Stone_firstStage(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
     {
         ModeAttack = 0;
+        ModeUp = 5; 
         this.stoneEnemy = stoneEnemy;
     }
 
     public override void Enter()
     {
         base.Enter();
+        
         ChangeMode();
     }
 
@@ -36,7 +38,7 @@ public class Stone_firstStage : EnemyState
     public void ChangeMode()
     {
         ModeAttack++;
-        ModeAttack %= 5;
+        ModeAttack %= ModeUp;
         if (ModeAttack == 0)
         {
             CanEnterRemoteFal = true;
@@ -51,6 +53,7 @@ public class Stone_firstStage : EnemyState
         }
         if (CanEnterRemoteFal)
         {
+            ModeUp = Random.Range(1, 6);
             stateMahine.ChangeState(stoneEnemy.remoteFal);
             CanEnterRemoteFal=false;
         }
