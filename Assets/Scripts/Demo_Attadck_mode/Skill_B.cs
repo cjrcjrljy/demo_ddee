@@ -27,15 +27,15 @@ public class Skill_B : SkillState
         {
             player.stateMachine.ChangeState(player.dashState);
             stateMachine.SwitchSkill();
-            Change_ani(player.uI_2);
+         //   Change_ani(player.uI_2);
 
         }
         base.UPdate();
     }
     public override void Exit()
     {
-        //player.uI_2.animator.SetBool("change", true);
-        //player.uI_2.animator.SetBool("normal", false);
+        player.uI_2.animator.SetBool("change", true);
+        player.uI_2.animator.SetBool("normal", false);
         base.Exit();
     }
 }

@@ -35,13 +35,13 @@ public class Skill_C : SkillState
         if (player.input.Realse)
         {
             stateMachine.SwitchSkill();
-            Change_ani(player.uI_3);
+            //Change_ani(player.uI_3);
         }
     }
     public override void Exit()
     {
-        //player.uI_3.animator.SetBool("change", true);
-        //player.uI_3.animator.SetBool("normal", false);
+        player.uI_3.animator.SetBool("change", true);
+        player.uI_3.animator.SetBool("normal", false);
         base.Exit();
     }
 }

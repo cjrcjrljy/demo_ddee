@@ -43,17 +43,17 @@ public class Skill_A : SkillState
             player.Hleath.Recevery(20);
 
             stateMachine.SwitchSkill();
-            Change_ani(player.uI_1);
+            //Change_ani(player.uI_1);
         }
         base.UPdate();
     }
     public override void Exit()
     {
         base.Exit();
-        //player.uI_1.animator.SetBool("change", true);
-        //player.uI_1.animator.SetBool("normal", false);
-      
+        player.uI_1.animator.SetBool("change", true);
+        player.uI_1.animator.SetBool("normal", false);
+
     }
-   
+
 }
 
