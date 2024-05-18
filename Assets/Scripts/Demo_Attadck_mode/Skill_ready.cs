@@ -17,6 +17,13 @@ public class Skill_ready : SkillState
     {
         base.UPdate();
         if (player.change_Skill)
-            stateMachine.ChangeState(player._A);
+        {
+            stateMachine.AddSKill(player._A);
+            Debug.Log("change");
+        }
+    }
+    public override void Exit()
+    {
+        base.Exit();
     }
 }

@@ -37,12 +37,12 @@ public class Skill_A : SkillState
       
         text.text = outp[player.AttackState.ComboCounter];
         if (player.change_BIG &&player.Attack_Change &&player.input.Switch&&ChangeTime<0)
-            stateMachine.ChangeState(player._B);
+            stateMachine.AddSKill(player._B);
         if (player.input.Realse&&ChangeTime<0)
         {
             player.Hleath.Recevery(20);
-            
-            stateMachine.ChangeState(player.ready);
+
+            stateMachine.SwitchSkill();
             Change_ani(player.uI_1);
         }
         base.UPdate();

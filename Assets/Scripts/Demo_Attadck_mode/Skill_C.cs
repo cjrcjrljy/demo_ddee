@@ -34,7 +34,7 @@ public class Skill_C : SkillState
         }
         if (player.input.Realse)
         {
-            stateMachine.ChangeState(player._B);
+            stateMachine.SwitchSkill();
             Change_ani(player.uI_3);
         }
     }

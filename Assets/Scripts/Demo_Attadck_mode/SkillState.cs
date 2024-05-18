@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+[Serializable]
 public class SkillState
 {
     public Text text;
@@ -26,6 +27,7 @@ public class SkillState
     public virtual void UPdate()
     {
         ChangeTime-= Time.deltaTime;
+       
     }
     public virtual void Exit() 
     {

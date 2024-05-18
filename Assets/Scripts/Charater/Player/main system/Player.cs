@@ -105,7 +105,13 @@ public class Player : Enity
     public void Update()
     {
         if (input.Hide)
-            stateMachine.ChangeState(hideState);
+        {
+            if(skillStateMachine.StateStack.Count > 1)
+            {
+                stateMachine.ChangeState(hideState);
+                skillStateMachine.SwitchSkill();
+            }
+        }
         stateMachine.CurrentState.Update();
         skillStateMachine.State.UPdate();
     }
@@ -140,7 +146,8 @@ public class Player : Enity
     IEnumerator BIGBANG(SkillState skillState)
     {
         yield return new WaitForSeconds(1);
-        skillStateMachine.ChangeState(skillState);
+        skillStateMachine.StateStack.Clear();
+        skillStateMachine.AddSKill(skillState);
     }
     #endregion
     public void NNTR()
