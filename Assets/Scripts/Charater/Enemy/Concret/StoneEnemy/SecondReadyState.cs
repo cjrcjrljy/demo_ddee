@@ -13,21 +13,21 @@ public class SecondReadyState : EnemyState
     public override void Enter()
     {
         base.Enter();
+       
     }
-
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
     public override void Update()
     {
         base.Update();
         if (TriggerCalled)
         {
             stateMahine.ChangeState(stoneEnemy.secondState);
-
         }
     }
+    public override void Exit()
+    {
+        base.Exit();
+        poolmanager.Release(stoneEnemy.Boom,stoneEnemy.animator.transform.position);
+    }
+
 
 }

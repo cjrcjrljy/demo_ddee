@@ -19,7 +19,7 @@ public class Skill_ready : SkillState
         if (player.change_Skill)
         {
             stateMachine.AddSKill(player._A);
-            Debug.Log("change");
+          
         }
     }
     public override void Exit()

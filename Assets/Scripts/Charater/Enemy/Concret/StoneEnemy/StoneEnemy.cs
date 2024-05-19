@@ -16,6 +16,8 @@ public class StoneEnemy : Enemy
     public float ApearFlow;
     public int Fallingmuch;
     public WaitForSeconds waitgap_fal;
+
+    public GameObject Boom;   
     public float gapTime;
     public override void Awake()
     {
@@ -32,15 +34,14 @@ public class StoneEnemy : Enemy
     private void OnEnable()
     {
         StateMachine.Initialize(stoneIdle);
+      
     }
     public override void Update()
     {
         base.Update();
-        if (Hleath.currentHleath < Hleath.maxHleath / 1.2f)
-            StateMachine.ChangeState(secondReadyState);
         if (IsHitted)
         {
-            Debug.Log("hit");
+           
             IsHitted = false;
         }
     }
