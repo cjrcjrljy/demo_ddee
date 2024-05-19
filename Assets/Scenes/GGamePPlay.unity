@@ -4754,7 +4754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enity: {fileID: 0}
   maxHleath: 1000
-  currentHleath: 0
+  currentHleath: 10000
   CanbeAttacked: 0
   CD_for_rec: 0
   Fx: {fileID: 0}
@@ -5178,7 +5178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bbe592a943c3c4daf0ac51f4610a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMenu: {fileID: 1812290351}
 --- !u!1 &1632638743
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: FailedChampionP2_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 5649
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34815720822634f47ae91e4c03287aed
+      internalID: 1075949668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_1
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 5649
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174a7aca283869b4995153e74655f9d1
+      internalID: -1615104570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_2
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 5652
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1367dcf901827f04c9fee80d79e4d0f0
+      internalID: 971405574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_3
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 5653
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3ef96eb38995f49a53ca15a0564a6e
+      internalID: 1347798615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 5130
+        width: 754
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83934764756ac6c4abaa5ddb21cc4671
+      internalID: 1022217143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_5
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 4636
+        width: 408
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ab6298915def5449941c832a1105ac
+      internalID: -80871205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_6
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 4631
+        width: 408
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5faaffe9f9dfc4aaabd8922561fec6
+      internalID: 1585294512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_7
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 4630
+        width: 408
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a752e61c53c10fe4f8d0900914e63dcd
+      internalID: 154237189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_8
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 4630
+        width: 408
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22e9a57f213f0c43a7e4e97ecfe3875
+      internalID: -860229239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4163
+        width: 389
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d36542b6342b0644bdb914caf8448e2
+      internalID: 1043854466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_10
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 4166
+        width: 389
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22290e8e770ffeb448a172b317353132
+      internalID: 1870400888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_11
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 4156
+        width: 389
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb28586b70132a4c92e66426e957fb3
+      internalID: -887867965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_12
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 4162
+        width: 389
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ec222045bdb6641ae7bcfd0e31ce76
+      internalID: 684887464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3683
+        width: 389
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3728fe2ffc46e9e4eb691c65476c1077
+      internalID: -530486214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +426,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FailedChampionP2_0: 1075949668
+      FailedChampionP2_1: -1615104570
+      FailedChampionP2_10: 1043854466
+      FailedChampionP2_11: 1870400888
+      FailedChampionP2_12: -887867965
+      FailedChampionP2_13: 684887464
+      FailedChampionP2_2: 971405574
+      FailedChampionP2_3: 1347798615
+      FailedChampionP2_4: 1022217143
+      FailedChampionP2_5: -80871205
+      FailedChampionP2_6: 1585294512
+      FailedChampionP2_7: 154237189
+      FailedChampionP2_8: -860229239
+      FailedChampionP2_9: -375111455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

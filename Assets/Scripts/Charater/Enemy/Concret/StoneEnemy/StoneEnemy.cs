@@ -10,7 +10,9 @@ public class StoneEnemy : Enemy
     public StoneTowardState stoneTowardState;
     public IsreadyToattack isready;
     public RemoteFalState remoteFal;
+    public SecondState secondState;
     public Stone_firstStage stone_FirstStage;
+    public SecondReadyState secondReadyState;
     public float ApearFlow;
     public int Fallingmuch;
     public WaitForSeconds waitgap_fal;
@@ -24,6 +26,8 @@ public class StoneEnemy : Enemy
         remoteFal = new RemoteFalState(StateMachine, this, "Falling", this);
         stoneTowardState = new StoneTowardState(StateMachine, this, "Searching", this);
         stone_FirstStage = new Stone_firstStage(StateMachine, this, "First", this);
+        secondState=new SecondState(StateMachine, this,"Second",this);
+        secondReadyState = new SecondReadyState(StateMachine, this, "Ready", this);
     }
     private void OnEnable()
     {
@@ -32,6 +36,8 @@ public class StoneEnemy : Enemy
     public override void Update()
     {
         base.Update();
+        if (Hleath.currentHleath < Hleath.maxHleath / 1.2f)
+            StateMachine.ChangeState(secondReadyState);
         if (IsHitted)
         {
             Debug.Log("hit");

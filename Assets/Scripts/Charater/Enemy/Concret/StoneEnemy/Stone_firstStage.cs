@@ -19,7 +19,6 @@ public class Stone_firstStage : EnemyState
     public override void Enter()
     {
         base.Enter();
-        
         ChangeMode();
     }
 
@@ -31,7 +30,6 @@ public class Stone_firstStage : EnemyState
     public override void Update()
     {
         base.Update();
-       
         if (TriggerCalled)
             stateMahine.ChangeState(stoneEnemy.stone_FirstStage);
     }

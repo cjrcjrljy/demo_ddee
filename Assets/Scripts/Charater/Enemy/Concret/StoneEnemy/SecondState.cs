@@ -10,6 +10,7 @@ public class SecondState : EnemyState
     {
         this.stoneEnemy = stoneEnemy;
         NorTime = 3;
+        Debug.Log("second");
     }
 
     public override void Enter()
