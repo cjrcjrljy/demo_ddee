@@ -19,12 +19,18 @@ public class Stone_firstStage : EnemyState
     public override void Enter()
     {
         base.Enter();
+        if (stoneEnemy.IsSecond)
+        {
+            stateMahine.ChangeState(stoneEnemy.secondState);
+            return;
+        }
         if (stoneEnemy.Hleath.currentHleath < stoneEnemy.Hleath.maxHleath /2)
         {
             stateMahine.ChangeState(stoneEnemy.secondReadyState);
             return;
         }
-        ChangeMode();
+
+       ChangeMode();
     }
 
     public override void Exit()

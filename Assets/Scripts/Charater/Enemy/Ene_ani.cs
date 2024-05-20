@@ -16,8 +16,12 @@ public class Ene_ani : MonoBehaviour
         demo.StateMachine.CurrrentState.TriggerCalled = true;
     }
     public virtual void AttackShake()
-    {  AttackSense.Instance.HitPause(demo.pauseTime);
-        AttackSense.Instance.Hitshake(demo.shakeTime,demo.strengh);
-        Debug.Log("shake");
+    {  
+        AttackSense.Instance.HitPause(demo.pauseTime);
+        AttackSense.Instance.Hitshake(demo.shakeTime, demo.strengh);
+    }
+    public virtual void DisOut()
+    {
+        gameObject.SetActive(false);
     }
 }

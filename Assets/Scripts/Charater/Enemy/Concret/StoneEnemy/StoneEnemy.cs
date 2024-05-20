@@ -16,11 +16,12 @@ public class StoneEnemy : Enemy
     public float ApearFlow;
     public int Fallingmuch;
     public WaitForSeconds waitgap_fal;
-
+    public bool IsSecond;
     public GameObject Boom;   
     public float gapTime;
     public override void Awake()
     {
+        IsSecond = false;
         base.Awake();
         waitgap_fal = new WaitForSeconds(gapTime);
         isready=GetComponentInChildren<IsreadyToattack>();

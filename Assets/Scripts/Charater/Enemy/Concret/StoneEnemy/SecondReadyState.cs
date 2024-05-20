@@ -13,7 +13,7 @@ public class SecondReadyState : EnemyState
     public override void Enter()
     {
         base.Enter();
-       
+        stoneEnemy.IsSecond = true;
     }
     public override void Update()
     {

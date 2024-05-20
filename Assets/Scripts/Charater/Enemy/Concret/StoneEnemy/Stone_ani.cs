@@ -22,4 +22,13 @@ public class Stone_ani :Ene_ani
         audio.clip = Attack;
         audio.Play();
     }
+    public void HeavyShke()
+    {
+        AttackSense.Instance.HitPause(demo.pauseTime);
+        AttackSense.Instance.Hitshake(demo.shakeTime, demo.strengh+3);
+    }
+    public void RelaseSuol()
+    {
+
+    }
 }
