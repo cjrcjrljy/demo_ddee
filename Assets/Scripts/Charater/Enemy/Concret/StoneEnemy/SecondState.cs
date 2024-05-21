@@ -6,9 +6,10 @@ public class SecondState : EnemyState
 {
     public StoneEnemy stoneEnemy;
     public bool CanEnterNorAttack;
-
-    public int ModeAttack;
-    public int ModeUp = 0;
+    public bool CanEnterRemoteFal;
+    public int ModeAttack=0;
+    public int ModeUp = 5;
+    public int ModeChange = 0;
     public SecondState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, StoneEnemy stoneEnemy) : base(stateMahine, enemy, animatorName)
     {
         this.stoneEnemy = stoneEnemy;
@@ -16,9 +17,10 @@ public class SecondState : EnemyState
 
     public override void Enter()
     {
-        ModeAttack = 0;
-        ModeUp = 5;
+        ModeChange = Random.Range(0,100);
+        Debug.Log(ModeAttack);
         base.Enter();
+        AttackMode_Change();
     }
 
     public override void Exit()
@@ -32,29 +34,34 @@ public class SecondState : EnemyState
     }
     public void AttackMode_Change()
     {
-
+        if (ModeChange >= 0 && ModeChange <= 70)
+            ChangeMode();
+        else 
+            stateMahine.ChangeState(stoneEnemy.crazyState);
+        
     }
+
     public void ChangeMode()
     {
         ModeAttack++;
         ModeAttack %= ModeUp;
-        //if (ModeAttack == 0)
-        //{
-        //    other = true;
-        //}
-        //else
-        //    CanEnterNorAttack = true;
-        //if (CanEnterNorAttack)
-        //{
-        //    stateMahine.ChangeState(stoneEnemy.stoneTowardState);
-        //    other = false;
-        //    CanEnterNorAttack = false;
-        //}
-        //if (other)
-        //{
-        //    ModeUp = Random.Range(1, 6);
- 
-        //    other = false;
-        //}
+        if (ModeAttack == 0)
+        {
+            CanEnterRemoteFal = true;
+        }
+        else
+            CanEnterNorAttack = true;
+        if (CanEnterNorAttack)
+        {
+            stateMahine.ChangeState(stoneEnemy.stoneTowardState);
+            CanEnterRemoteFal = false;
+            CanEnterNorAttack = false;
+        }
+        if (CanEnterRemoteFal)
+        {
+            ModeUp = Random.Range(1, 6);
+            stateMahine.ChangeState(stoneEnemy.remoteFal);
+            CanEnterRemoteFal = false;
+        }
     }
 }

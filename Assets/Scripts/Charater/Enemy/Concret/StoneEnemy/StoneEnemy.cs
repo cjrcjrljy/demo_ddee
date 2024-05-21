@@ -13,6 +13,7 @@ public class StoneEnemy : Enemy
     public SecondState secondState;
     public Stone_firstStage stone_FirstStage;
     public SecondReadyState secondReadyState;
+    public CrazyState crazyState;
     public float ApearFlow;
     public int Fallingmuch;
     public WaitForSeconds waitgap_fal;
@@ -31,6 +32,7 @@ public class StoneEnemy : Enemy
         stone_FirstStage = new Stone_firstStage(StateMachine, this, "First", this);
         secondState=new SecondState(StateMachine, this,"Second",this);
         secondReadyState = new SecondReadyState(StateMachine, this, "Ready", this);
+        crazyState = new CrazyState(StateMachine, this, "Crazy", this);
     }
     private void OnEnable()
     {

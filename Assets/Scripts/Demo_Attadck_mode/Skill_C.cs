@@ -34,6 +34,7 @@ public class Skill_C : SkillState
         }
         if (player.input.Realse)
         {
+            player.Hleath.currentHleath = player.Hleath.maxHleath;
             stateMachine.SwitchSkill();
             //Change_ani(player.uI_3);
         }

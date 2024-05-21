@@ -1810,6 +1810,9 @@ MonoBehaviour:
   - parent: {fileID: 0}
     size: 5
     prefeb: {fileID: 8766680204688818308, guid: af0ae904a5d68a44eb1e4d31e0754685, type: 3}
+  - parent: {fileID: 0}
+    size: 5
+    prefeb: {fileID: 7118270810649915511, guid: a33ffd2024507144b9fd8d7e69bc6261, type: 3}
   VfxPools:
   - parent: {fileID: 0}
     size: 5
@@ -3085,6 +3088,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &905882155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905882156}
+  m_Layer: 0
+  m_Name: Lo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905882156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905882155}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1474133882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &915238669
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,6 +4319,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 333872709}
+  - {fileID: 905882156}
   m_Father: {fileID: 1491060052}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1474133883
@@ -4377,6 +4412,9 @@ MonoBehaviour:
   audio: {fileID: 0}
   Attack: {fileID: 8300000, guid: 9a5eebbce2bd7d24b9efac22dec3b2cc, type: 3}
   stoneEnemy: {fileID: 0}
+  Soul: {fileID: 7118270810649915511, guid: a33ffd2024507144b9fd8d7e69bc6261, type: 3}
+  Locat: {fileID: 905882155}
+  much: 1
 --- !u!82 &1474133886
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4810,6 +4848,7 @@ MonoBehaviour:
   isready: {fileID: 0}
   ApearFlow: 10
   Fallingmuch: 3
+  IsSecond: 0
   Boom: {fileID: 8766680204688818308, guid: af0ae904a5d68a44eb1e4d31e0754685, type: 3}
   gapTime: 0.3
 --- !u!1 &1493119704
@@ -5116,7 +5155,7 @@ Transform:
   m_GameObject: {fileID: 1627728099}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.85, y: 0.24, z: 0.040086683}
+  m_LocalPosition: {x: 43.48, y: -2.69, z: 0.040086683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
