@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/newnew/This/Assets/Scenes/RealPlay.unity
     guid: bb05cbd87e0bd7844ac63499278f05d8
+  - enabled: 1
+    path: Assets/Scenes/HH.unity
+    guid: a425a43883df70d48952b72993ebba81
   m_configObjects: {}

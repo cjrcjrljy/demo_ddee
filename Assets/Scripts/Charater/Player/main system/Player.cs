@@ -62,6 +62,7 @@ public class Player : Enity
     public bool change_BIG = false;
     public bool Attack_Change = false;
     public SkillStateMachine skillStateMachine;
+    public GameObject Menu;
     [Foldout("music", true)]
     #endregion
     #region"State"
@@ -74,6 +75,7 @@ public class Player : Enity
     #region "Normal"
     public override void  Awake()
     {
+    
         Collider = GetComponent<Collider2D>();
         ori = Collider.sharedMaterial;
         sa = new List<SaveFor>();
@@ -95,6 +97,12 @@ public class Player : Enity
         _B=new Skill_B("B", skillStateMachine, this);
         _C=new Skill_C("C", skillStateMachine, this);
         ready = new Skill_ready("aaa", skillStateMachine, this);
+    }
+    private void OnEnable()
+    {
+        Menu.SetActive(false);
+        Time.timeScale = 1f;
+        Hleath.currentHleath = Hleath.maxHleath;
     }
     public void Start()
     {
@@ -150,6 +158,15 @@ public class Player : Enity
         skillStateMachine.AddSKill(skillState);
     }
     #endregion
+
+
+    private void OnDisable()
+    {
+        Time.timeScale = 0f;
+        if(Menu!=null)
+         Menu.SetActive(true);
+    }
+
     public void NNTR()
     {
         if(sa.Count==0)
