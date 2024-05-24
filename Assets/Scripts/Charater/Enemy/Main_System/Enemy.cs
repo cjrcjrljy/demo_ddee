@@ -38,11 +38,11 @@ public class Enemy : Enity
     {
         if (Target.transform.position.x < transform.position.x)
         {
-            if (!FacingRight)
+            if (FacingRight)
                 Filp();
         }
         else
-            if (FacingRight)
+            if (!FacingRight)
             Filp();
     }
   

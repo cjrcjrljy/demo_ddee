@@ -6,12 +6,14 @@ public class Ene_ani : MonoBehaviour
 {
     public Enemy demo;
     public Animator animator;
+    public SpriteRenderer spriteRenderer;
     public virtual void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator=GetComponent<Animator>();
         demo = GetComponentInParent<Enemy>();
     }
-    public virtual void TriggerOut()
+    public virtual void TriggerOut()//最标准的状态切换
     {
         demo.StateMachine.CurrrentState.TriggerCalled = true;
     }
@@ -23,5 +25,9 @@ public class Ene_ani : MonoBehaviour
     public virtual void DisOut()
     {
         gameObject.SetActive(false);
+    }
+    private void OnDisable()
+    {
+       spriteRenderer.sprite=null;
     }
 }
