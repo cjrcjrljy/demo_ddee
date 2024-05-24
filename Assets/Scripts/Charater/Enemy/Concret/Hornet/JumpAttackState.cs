@@ -12,8 +12,10 @@ public class JumpAttackState : EnemyState
 
     public override void Enter()
     {
+        horent.rb.gravityScale = 0;
         base.Enter();
-       
+        Debug.Log("jn");
+        horent.Setvelocity(horent.Jump_x * horent.Facingdir, horent.Jump_y);
     }
 
     public override void Exit()
@@ -24,5 +26,5 @@ public class JumpAttackState : EnemyState
     public override void Update()
     {
         base.Update();
-    }
+    }   
 }

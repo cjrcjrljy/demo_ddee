@@ -24,6 +24,7 @@ public class Hor_ani :Ene_ani
     {
         OpenEffect();
         effect.Play("BigSkill");
+        horent.Setvelocity(0, 0);
     }
 
      void OpenEffect()
@@ -33,5 +34,10 @@ public class Hor_ani :Ene_ani
     void CloseEffect()
     {
         effect.gameObject.SetActive(!false);
+    }
+    void ControlGra()
+    {
+        horent.Setvelocity(0, 0);
+        horent.rb.gravityScale = 1;
     }
 }
