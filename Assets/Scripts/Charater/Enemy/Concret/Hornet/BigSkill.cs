@@ -14,7 +14,7 @@ public class BigSkill : JumpAttackState
     public override void Enter()
     {
         base.Enter();
-
+       
         horent.EffectAni.gameObject.SetActive(true);
         enemyBase.animator.SetBool(StateName, true);
     }

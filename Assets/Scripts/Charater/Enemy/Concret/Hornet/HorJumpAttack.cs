@@ -12,6 +12,7 @@ public class HorJumpAttack : JumpAttackState
 
     public override void Enter()
     {
+       
         base.Enter();
         Debug.Log("inin");
         horent.animator.SetBool(StateName, true);
@@ -20,6 +21,8 @@ public class HorJumpAttack : JumpAttackState
     public override void Exit()
     {
         base.Exit();
+        horent.animator.SetBool(StateName, false);
+      
     }
 
     public override void Update()
@@ -28,9 +31,8 @@ public class HorJumpAttack : JumpAttackState
      
         if (horent.IsGrounded)
         {
-            horent.animator.SetBool("jumpFall", true);
+          
             stateMahine.ChangeState(horent.fitstState);
-            horent.animator.SetBool(StateName, false);
         }
     }
 }

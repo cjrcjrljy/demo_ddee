@@ -15,6 +15,7 @@ public class Horent : Enemy
     public override void Awake()
     {
         base.Awake();
+        Time.timeScale = 0.09f;
         fitstState = new FitstState(StateMachine, this, "First", this);
         attacK_Horstate = new AttacK_hor(StateMachine, this, "Attack", this);
         bigSkill = new BigSkill(StateMachine, this, "JumpState",this, "Bigskill");
