@@ -22,10 +22,13 @@ public class JumpAttackState : EnemyState
     public override void Exit()
     {
         base.Exit();
+        horent.rb.gravityScale = 1f;
     }
 
     public override void Update()
     {
         base.Update();
+       
+
     }   
 }

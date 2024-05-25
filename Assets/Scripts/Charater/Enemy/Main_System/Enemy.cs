@@ -10,6 +10,7 @@ public class Enemy : Enity
     public int pauseTime;
     public float strengh;
 
+
     [Header("enemy")]
     public GameObject Target;
     public Player player;

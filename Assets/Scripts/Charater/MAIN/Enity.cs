@@ -58,5 +58,10 @@ public class Enity : MonoBehaviour
     {
         rb.velocity = new Vector2(x, y);
     }
+    public void Setvelocity(Vector3 velocity,float speed)
+    {
+        rb.velocity = velocity* speed;
+        Debug.Log(velocity * speed);
+    }
 
 }

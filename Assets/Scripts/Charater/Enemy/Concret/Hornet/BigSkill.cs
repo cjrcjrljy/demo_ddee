@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BigSkill : JumpAttackState
+public class BigSkill : EnemyState
 {
-    public string StateName;
-
-    public BigSkill(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Horent horent,string statename) : base(stateMahine, enemy, animatorName, horent)
+    public Horent horent;
+    public BigSkill(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Horent horent) : base(stateMahine, enemy, animatorName)
     {
-        StateName = statename;
+        this.horent = horent;
     }
 
     public override void Enter()
     {
         base.Enter();
-       
+        horent.rb.gravityScale = 0;
+        horent.Setvelocity(horent.Jump_x * horent.Facingdir, horent.Jump_y);
         horent.EffectAni.gameObject.SetActive(true);
-        enemyBase.animator.SetBool(StateName, true);
+     
     }
 
     public override void Exit()
     {
         horent.rb.gravityScale = 1f;
-        enemyBase.animator.SetBool(StateName, false);
+        
         base.Exit();
     }
 
@@ -31,7 +31,7 @@ public class BigSkill : JumpAttackState
         base.Update();
         if(!horent.EffectAni.isActiveAndEnabled)
         {
-            stateMahine.ChangeState(horent.fitstState);
+            stateMahine.ChangeState(horent.horfallstate);
         }
     }
 }

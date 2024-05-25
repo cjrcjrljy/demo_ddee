@@ -1014,8 +1014,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09372425, y: 0.08200884}
-  m_Size: {x: 1.2029362, y: 2.3355737}
+  m_Offset: {x: -0.03467016, y: 0.13632984}
+  m_Size: {x: 0.94614744, y: 2.049153}
   m_Direction: 0
 --- !u!50 &265880951
 Rigidbody2D:
@@ -1088,7 +1088,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.91, y: -4.33, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8851, y: 0.8851, z: 0.8851}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1556780620}
@@ -1117,16 +1117,17 @@ MonoBehaviour:
   Hleath: {fileID: 0}
   FacingRight: 1
   Facingdir: 1
-  shakeTime: 0
-  pauseTime: 0
-  strengh: 0
+  shakeTime: 1
+  pauseTime: 1
+  strengh: 0.5
   Target: {fileID: 1627728099}
   player: {fileID: 0}
   trigger: 0
   Movespeed: 7
   enemyAttacks: []
   EffectAni: {fileID: 411021991}
-  Jump_y: 3
+  DashSpeed: 12
+  Jump_y: 6
   Jump_x: 2
 --- !u!1 &298864529
 GameObject:
@@ -5382,7 +5383,7 @@ Transform:
   m_GameObject: {fileID: 1556780618}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -0.99, z: 9.945222}
+  m_LocalPosition: {x: -0.046, y: -0.945, z: 9.945222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6735,8 +6736,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.96, y: 2.49}
+  m_Offset: {x: 0.040791977, y: -0.0034939917}
+  m_Size: {x: 1.9936184, y: 1.9936184}
   m_Direction: 1
 --- !u!114 &2060411084
 MonoBehaviour:

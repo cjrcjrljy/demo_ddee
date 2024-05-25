@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttacK_hor : EnemyState
+public class FallState : EnemyState
 {
     public Horent horent;
-    public AttacK_hor(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Horent horent) : base(stateMahine, enemy, animatorName)
+
+    public FallState(EnemyStateMahine stateMahine, Enemy enemy, string animatorName,Horent _ho) : base(stateMahine, enemy, animatorName)
     {
-        this.horent = horent;
+        horent = _ho;
     }
 
     public override void Enter()
     {
         base.Enter();
-    
+       
     }
 
     public override void Exit()
     {
         base.Exit();
-        horent.Setvelocity(0, 0);
     }
 
     public override void Update()
     {
         base.Update();
-        if (TriggerCalled)
+        if (horent.IsGrounded)
             stateMahine.ChangeState(horent.gap);
     }
 }

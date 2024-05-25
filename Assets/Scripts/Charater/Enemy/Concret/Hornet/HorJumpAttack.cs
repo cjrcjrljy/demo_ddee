@@ -2,37 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HorJumpAttack : JumpAttackState
+public class HorJumpAttack :EnemyState
 {
-    public string StateName;
-    public HorJumpAttack(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Horent horent, string stateName) : base(stateMahine, enemy, animatorName, horent)
+    
+    public Horent horent;
+    public HorJumpAttack(EnemyStateMahine stateMahine, Enemy enemy, string animatorName, Horent horent) : base(stateMahine, enemy, animatorName)
     {
-        StateName = stateName;
+        this.horent = horent;
+      
     }
 
     public override void Enter()
     {
-       
+        StateTimer=0.5f;
+        horent.Setvelocity(horent.Jump_x * horent.Facingdir, 1.7f*horent.Jump_y);
+        horent.animator.SetBool("JumpState", false);
         base.Enter();
         Debug.Log("inin");
-        horent.animator.SetBool(StateName, true);
+     
     }
 
     public override void Exit()
     {
+      horent.rb.gravityScale = 1.0f;
         base.Exit();
-        horent.animator.SetBool(StateName, false);
-      
+        Debug.Log("out");
+        horent.Setvelocity(0, 0);
     }
 
     public override void Update()
     {
         base.Update();
-     
-        if (horent.IsGrounded)
-        {
-          
-            stateMahine.ChangeState(horent.fitstState);
-        }
+        if (StateTimer < 0)
+            if (horent.IsGrounded)
+                stateMahine.ChangeState(horent.gap);
+   
     }
 }

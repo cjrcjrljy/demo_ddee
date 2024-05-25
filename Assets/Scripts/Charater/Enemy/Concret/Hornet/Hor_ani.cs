@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hor_ani :Ene_ani
+public class Hor_ani : Ene_ani
 {
     public Horent horent;
     public Animator effect;
@@ -27,9 +27,19 @@ public class Hor_ani :Ene_ani
         horent.Setvelocity(0, 0);
     }
 
-     void OpenEffect()
+    public void dash()
     {
-       effect.gameObject.SetActive(true);
+        horent.FacingPlayer();
+        Vector3 position = (horent.Target.transform.position - transform.position).normalized;
+        position *= position.magnitude /Mathf.Abs( position.y)*  horent.DashSpeed;
+        horent.rb.gravityScale = 0;
+        horent.Setvelocity(position.x,position.y);
+    }
+
+    #region "nothing"
+    void OpenEffect()
+    {
+        effect.gameObject.SetActive(true);
     }
     void CloseEffect()
     {
@@ -37,7 +47,7 @@ public class Hor_ani :Ene_ani
     }
     void ControlGra()
     {
-        horent.Setvelocity(0, 0);
         horent.rb.gravityScale = 1;
     }
+    #endregion
 }
