@@ -970,11 +970,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 265880954}
-  - component: {fileID: 265880953}
   - component: {fileID: 265880952}
   - component: {fileID: 265880951}
   - component: {fileID: 265880950}
   - component: {fileID: 265880955}
+  - component: {fileID: 265880956}
+  - component: {fileID: 265880957}
   m_Layer: 7
   m_Name: Horent
   m_TagString: Untagged
@@ -1060,24 +1061,6 @@ MonoBehaviour:
   HitMat: {fileID: 2100000, guid: 9a94574718081564399c5225069a4104, type: 2}
   originalMat: {fileID: 0}
   ReadyAttack: {fileID: 0}
---- !u!114 &265880953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 265880949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 616575f8f758a3745becd9af85ea5723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enity: {fileID: 265880955}
-  maxHleath: 1000
-  currentHleath: 0
-  CanbeAttacked: 0
-  CD_for_rec: 0
-  Fx: {fileID: 265880952}
 --- !u!4 &265880954
 Transform:
   m_ObjectHideFlags: 0
@@ -1127,8 +1110,50 @@ MonoBehaviour:
   enemyAttacks: []
   EffectAni: {fileID: 411021991}
   DashSpeed: 12
+  stopDector: {fileID: 0}
   Jump_y: 6
   Jump_x: 2
+--- !u!114 &265880956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265880949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1369eac3fad9fc4ead8c26b5f2fca71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Stop: 0
+  ContinueHitted: 0.5
+  StopTime: 2
+  HittedTimer: 0
+  MaxTrigger: 1
+  CurrTrigger: 0
+  Sub: 4
+  Add: 5
+  canbeHitted: 0
+--- !u!114 &265880957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265880949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9bb17745e5da242a626bf60ab78243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enity: {fileID: 265880955}
+  maxHleath: 1000
+  currentHleath: 0
+  CanbeAttacked: 0
+  CD_for_rec: 0
+  Fx: {fileID: 265880952}
+  horent: {fileID: 0}
+  stopDector: {fileID: 0}
 --- !u!1 &298864529
 GameObject:
   m_ObjectHideFlags: 0
@@ -3404,7 +3429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   image: {fileID: 1661814962}
-  Hleath: {fileID: 265880953}
+  Hleath: {fileID: 265880957}
   currentfix: 1
 --- !u!114 &774260916
 MonoBehaviour:
@@ -6711,7 +6736,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060411079}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

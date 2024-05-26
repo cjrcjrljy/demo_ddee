@@ -10,12 +10,12 @@ public class HleathSystem : MonoBehaviour
     public bool CanbeAttacked;
     public float CD_for_rec;
     public EntityFx Fx;
-    private void Awake()
+    public virtual void Awake()
     {
         enity = GetComponent<Enity>();
         Fx = GetComponent<EntityFx>();
     }
-    public void OnEnable()
+    public virtual void OnEnable()
     {
         CD_for_rec = 0;
         CanbeAttacked = true;
@@ -25,43 +25,43 @@ public class HleathSystem : MonoBehaviour
     /// 如果attack bool为false则会直接返回
     /// </summary>
     /// <param name="damage"></param>
-    public void Damage(float damage)
+    public virtual void Damage(float damage)
     {
-        if(!CanbeAttacked)
+        if (!CanbeAttacked)
         {
             return;
         }
         enity.IsHitted = true;
         StartCoroutine(Fx.FlashFX());
-        currentHleath-=damage;
+        currentHleath -= damage;
         if (currentHleath <= 0)
         {
             Die();
         }
     }
-    public void Die()
+    public virtual void Die()
     {
         if (currentHleath <= 0)
         {
             currentHleath = 0;
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         Die();
-        CD_for_rec -= Time.deltaTime;  
+        CD_for_rec -= Time.deltaTime;
     }
     /// <summary>
     /// 传入具体数字而不是百分比
     /// </summary>
     /// <param name="rec"></param>
-    public void Recevery(float rec)
+    public virtual void Recevery(float rec)
     {
-        if (currentHleath == maxHleath||CD_for_rec>0)
+        if (currentHleath == maxHleath || CD_for_rec > 0)
             return;
-        currentHleath=Mathf.Clamp(currentHleath+rec, 0, maxHleath);
+        currentHleath = Mathf.Clamp(currentHleath + rec, 0, maxHleath);
         CD_for_rec = 20;
     }
     /// <summary>
@@ -69,7 +69,7 @@ public class HleathSystem : MonoBehaviour
     /// </summary>
     /// <param name="rec"></param>
     /// <param name="k"></param>
-    public void Recevery(float rec,int k)
+    public virtual void Recevery(float rec, int k)
     {
         currentHleath = Mathf.Clamp(currentHleath + rec, 0, maxHleath);
     }

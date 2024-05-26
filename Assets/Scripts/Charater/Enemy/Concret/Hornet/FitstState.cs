@@ -19,6 +19,13 @@ public class FitstState : EnemyState
     public override void Update()
     {
         base.Update();
+        if (!horent.IsGrounded)
+        {
+            enemyBase.animator.SetBool("Fall", true);
+        }
+        else
+            enemyBase.animator.SetBool("Fall", false);
+
         horent.FacingPlayer();
     }
 

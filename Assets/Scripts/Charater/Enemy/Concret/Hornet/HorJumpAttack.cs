@@ -18,15 +18,14 @@ public class HorJumpAttack :EnemyState
         horent.Setvelocity(horent.Jump_x * horent.Facingdir, 1.7f*horent.Jump_y);
         horent.animator.SetBool("JumpState", false);
         base.Enter();
-        Debug.Log("inin");
-     
+       
     }
 
     public override void Exit()
     {
       horent.rb.gravityScale = 1.0f;
         base.Exit();
-        Debug.Log("out");
+      
         horent.Setvelocity(0, 0);
     }
 
