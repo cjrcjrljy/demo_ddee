@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: 8808792159720314d91e5844cac0c599
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FailedChampionP1_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7116
+        width: 608
+        height: 396
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99751f7355a04c649b2094e7c6cc6394
+      internalID: -814698823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_1
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 7115
+        width: 611
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbc632a3bec0d74dac28737dbe46de4
+      internalID: 1814476364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_2
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 7120
+        width: 612
+        height: 381
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d9fcf9cd0fe5549a5119051bdac641
+      internalID: 1547008791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_3
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 7118
+        width: 602
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5483f5892afacff4ba48ab8f3879e8a2
+      internalID: 993027327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_4
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 7121
+        width: 606
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb179c759bfda14e8438126387a188c
+      internalID: 483515286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_5
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 5792
+        width: 532
+        height: 478
+      alignment: 9
+      pivot: {x: 0.47743696, y: 0.39648947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bcdcb9daca279428fc6f5d6f4bf088
+      internalID: -233135809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_6
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 5791
+        width: 603
+        height: 461
+      alignment: 9
+      pivot: {x: 0.5144203, y: 0.36473998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59c4483c3e782644980b63d2fa1dc88
+      internalID: -1024005348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_7
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 5789
+        width: 607
+        height: 441
+      alignment: 9
+      pivot: {x: 0.5252249, y: 0.38640738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 388d5450273803d4a9ef3028a58989e4
+      internalID: 537367829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_8
+      rect:
+        serializedVersion: 2
+        x: 2622
+        y: 5796
+        width: 503
+        height: 463
+      alignment: 9
+      pivot: {x: 0.508817, y: 0.38400584}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f03e6fe308740146b79cdd4c865f91d
+      internalID: 1850713414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_9
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3795
+        width: 568
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7220739c2a769534ba5a9fcdd1e4c09a
+      internalID: 536428875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3188
+        width: 526
+        height: 567
+      alignment: 9
+      pivot: {x: 0.5161589, y: 0.41005635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef867ea9eaf0b8b4aae51ab2113ccf93
+      internalID: -1695829749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_11
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 3184
+        width: 556
+        height: 451
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a74b72bcc535e479b0ea0cedab5842
+      internalID: 214712962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_12
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 3169
+        width: 541
+        height: 482
+      alignment: 9
+      pivot: {x: 0.49999866, y: 0.5763473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acd634c7bb9c7a44182e9aff642ac6f1
+      internalID: 1072920338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2578
+        width: 570
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ac3f9d1aea2af4fb52dd12767ea105
+      internalID: -617877773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_14
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 2575
+        width: 414
+        height: 554
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5ac2cc64c7cc84ab39a810a82919c7
+      internalID: 1116477688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_15
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 2562
+        width: 514
+        height: 574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68629ad11e041a44b2f13a38cb3b307
+      internalID: 1532101329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_16
+      rect:
+        serializedVersion: 2
+        x: 2022
+        y: 2566
+        width: 563
+        height: 524
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e411c75c195bc428c9d0580b1088c2
+      internalID: 1777564978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FailedChampionP1_17
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 2566
+        width: 532
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52ec1769204c904b980764b904f9bf5
+      internalID: 1182919238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FailedChampionP1_0: -814698823
+      FailedChampionP1_1: 1814476364
+      FailedChampionP1_10: -1695829749
+      FailedChampionP1_11: 214712962
+      FailedChampionP1_12: 1072920338
+      FailedChampionP1_13: -617877773
+      FailedChampionP1_14: 1116477688
+      FailedChampionP1_15: 1532101329
+      FailedChampionP1_16: 1777564978
+      FailedChampionP1_17: 1182919238
+      FailedChampionP1_2: 1547008791
+      FailedChampionP1_3: 993027327
+      FailedChampionP1_4: 483515286
+      FailedChampionP1_5: -233135809
+      FailedChampionP1_6: -1024005348
+      FailedChampionP1_7: 537367829
+      FailedChampionP1_8: 1850713414
+      FailedChampionP1_9: 536428875
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
